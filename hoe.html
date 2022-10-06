@@ -3,20 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="hoe.css">
-  <title>hoe
+  <title>
+    hoe
   </title>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul id="topMenu">
-        <li><a href="게시판.html">게시판</a></li> <!-- a href = "버튼 누르면 들어가는 링크"  --> 
-        <li><a href="캘린더.html">캘린더</a></li>
-        <li><a href="지도.html">지도</a></li>
-        <li><a href="학적.html">학적</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav>
+    <div class="container">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li> <a href="게시판.html">게시판<i class='dropdown'></i></a>
+                <ul>
+                    <li><a href="#">한경 시장</a></li>
+                    <li><a href="#">졸업생 어울림</a></li>
+                    <li><a href="#">취업 마당</a></li>
+                    <li><a href="#">스터디 & 프로젝트</a></li>
+                </ul>
+            </li>
+            <li> <a href="지도.html">지도<i class='dropdown'></i></a>
+              <ul>
+                  <li><a href="#">캠퍼스맵</a></li>
+                  <li><a href="#">주변 편의시설</a></li>
+              </ul>
+            </li>
+            <li> <a href="캘린더.html">캘린더<i class='dropdown'></i></a>
+            </li>
+            <li> <a href="학적.html">학적<i class='dropdown'></i></a>
+              <ul>
+                  <li><a href="#">캠퍼스맵</a></li>
+                  <li><a href="#">주변 편의시설</a></li>
+              </ul>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    $('nav li').hover(
+        function() {
+            $('ul', this).stop().slideDown(200);
+        },
+        function() {
+            $('ul', this).stop().slideUp(200);
+        }
+    );
+</script>
+  
   <footer>
 	  <div class="siteInfo">		
 	  	<span>국립한경대학교 HANKYONG NATIONAL UNIV.</span>		
