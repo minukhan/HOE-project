@@ -29,6 +29,7 @@ a {
   margin: auto;
 }
 
+
 h1 {
   text-align: center;
   margin-top: 150px;
@@ -92,6 +93,12 @@ nav ul li ul li a:hover {
 nav .dropdown {
   margin-left: 6px;
 }
+
+/* 로그인 버튼 영역 */
+
+
+
+
 /******************/
 /*   푸터 영역    */
 /******************/
