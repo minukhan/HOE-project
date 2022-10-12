@@ -83,11 +83,12 @@
             signInWithEmailAndPassword(auth, signInEmail, signInPassword)
                 .then((userCredential) => {
                     console.log(userCredential)
-                    console.log("로그인 성공")
+                    alert("로그인 성공")
                     const user = userCredential.user;
+                    
                 })
                 .catch((error) => {
-                    console.log("로그인 실패")
+                    alert("로그인 실패")
                     const errorCode = error.code;
                     const errorMessage = error.message;
                 });
