@@ -47,16 +47,24 @@ nav ul {
   padding: 0;
 }
 
+/* 호이 로고 */
+nav ul ol {
+  position: absolute;
+  top: 10px;
+  right: 400px;
+}
+
 nav ul li {
   display: inline-block;
   position: relative;
+  right: 400px;
 }
 
 nav ul li a {
   color: #fff;
   display: block;
-  font-size: 14px;
-  padding: 15px 14px;
+  font-size: 18px;
+  padding: 30px 15px;
   transition: 0.3s linear;
 }
 
@@ -94,10 +102,15 @@ nav .dropdown {
   margin-left: 6px;
 }
 
-<<<<<<< HEAD
 
 
 /* 로그인 버튼 영역 */
+nav ul div {
+  position: absolute;
+  top: -4px;
+  left: 1450px;
+}
+
 nav ul ol {
   display: inline-block;
   position: relative;
@@ -118,13 +131,6 @@ nav ul ol:hover {
 
 
 
-=======
-
-
-/* 로그인 버튼 영역 */
-
-
->>>>>>> 46d8c4604e650ba5cc75a2748ab2f18ba2da15d2
 /******************/
 /*   푸터 영역    */
 /******************/
