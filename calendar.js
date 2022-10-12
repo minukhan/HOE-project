@@ -1,9 +1,9 @@
 let CDate = new Date();
 let today = new Date();
 
-buildCalender();
+buildCalendar();
 
-function buildCalender(){  
+function buildCalendar(){  
     let prevLast = new Date(CDate.getFullYear(), CDate.getMonth(), 0);  
     let thisFirst = new Date(CDate.getFullYear(), CDate.getMonth(), 1);  
     let thisLast = new Date(CDate.getFullYear(), CDate.getMonth() + 1, 0);  
@@ -37,10 +37,10 @@ function buildCalender(){
 
 function prevCal(){  
     CDate.setMonth(CDate.getMonth()-1);  
-    buildCalender();  
+    buildCalendar();  
     }
     
 function nextCal(){  
     CDate.setMonth(CDate.getMonth()+1);  
-    buildCalender();  
+    buildCalendar();  
     }
