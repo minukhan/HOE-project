@@ -94,11 +94,37 @@ nav .dropdown {
   margin-left: 6px;
 }
 
+<<<<<<< HEAD
+
+
+/* 로그인 버튼 영역 */
+nav ul ol {
+  display: inline-block;
+  position: relative;
+}
+
+nav ul ol a {
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px 10px;
+  transition: 0.3s linear;
+  margin-right: 40px;
+}
+
+nav ul ol:hover {
+  background: #126d9b;
+}
+
+
+
+=======
 
 
 /* 로그인 버튼 영역 */
 
 
+>>>>>>> 46d8c4604e650ba5cc75a2748ab2f18ba2da15d2
 /******************/
 /*   푸터 영역    */
 /******************/
