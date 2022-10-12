@@ -94,8 +94,26 @@ nav .dropdown {
   margin-left: 6px;
 }
 
-/* 로그인 버튼 영역 */
 
+
+/* 로그인 버튼 영역 */
+nav ul ol {
+  display: inline-block;
+  position: relative;
+}
+
+nav ul ol a {
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px 10px;
+  transition: 0.3s linear;
+  margin-right: 40px;
+}
+
+nav ul ol:hover {
+  background: #126d9b;
+}
 
 
 
