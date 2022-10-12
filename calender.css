@@ -20,8 +20,13 @@ button {
       테두리선을 없애고 적당히 높이를 지정해줍시다.
   */
     font-family: var(--font);
-    border:none;
+    border: none;
+    border-radius: 5px;
     height: 32px;;
+}
+button:hover {
+  background: #EFBBCF;
+  color: white;
 }
 
 .header {
