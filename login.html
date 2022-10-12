@@ -85,7 +85,7 @@
                     console.log(userCredential)
                     alert("로그인 성공")
                     const user = userCredential.user;
-                    
+                    document.location.href = "./hoe.html";
                 })
                 .catch((error) => {
                     alert("로그인 실패")
