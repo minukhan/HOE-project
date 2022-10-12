@@ -60,6 +60,16 @@ nav ul li a {
   transition: 0.3s linear;
 }
 
+nav ul li a.current {
+  background-color: #ff6347;
+  color: white;
+}
+
+nav ul li hover:not(.current) {
+  background-color: #cd854f;
+  color: white;
+}
+
 nav ul li:hover {
   background: #126d9b;
 }
@@ -94,7 +104,6 @@ nav .dropdown {
   margin-left: 6px;
 }
 
-<<<<<<< HEAD
 
 
 /* 로그인 버튼 영역 */
@@ -118,13 +127,6 @@ nav ul ol:hover {
 
 
 
-=======
-
-
-/* 로그인 버튼 영역 */
-
-
->>>>>>> 46d8c4604e650ba5cc75a2748ab2f18ba2da15d2
 /******************/
 /*   푸터 영역    */
 /******************/
