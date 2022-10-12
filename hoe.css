@@ -60,6 +60,16 @@ nav ul li a {
   transition: 0.3s linear;
 }
 
+nav ul li a.current {
+  background-color: #ff6347;
+  color: white;
+}
+
+nav ul li hover:not(.current) {
+  background-color: #cd854f;
+  color: white;
+}
+
 nav ul li:hover {
   background: #126d9b;
 }
