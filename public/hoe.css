@@ -35,7 +35,35 @@ h1 {
   margin-top: 150px;
 }
 
+/********************/
+/* 로그인 버튼 영역 */
+/********************/
+
+.login {
+  background-color: #2acaea;
+}
+
+.login li {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 5px;
+  padding: 10px 10px;
+  position: relative;
+  left: 80%;
+}
+
+.login li a{
+  color: white;
+  font-size: 14px;
+}
+
+.login li:hover {
+  background: #126d9b;
+}
+
+/*********************/
 /* Navigation Styles */
+/*********************/
 
 nav {
   background: #2acaea;
@@ -55,7 +83,7 @@ nav ul li {
 nav ul li a {
   color: #fff;
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   padding: 15px 14px;
   transition: 0.3s linear;
 }
@@ -93,29 +121,6 @@ nav ul li ul li a:hover {
 nav .dropdown {
   margin-left: 6px;
 }
-
-
-
-/* 로그인 버튼 영역 */
-nav ul ol {
-  display: inline-block;
-  position: relative;
-}
-
-nav ul ol a {
-  color: #fff;
-  display: inline-block;
-  font-size: 14px;
-  padding: 10px 10px;
-  transition: 0.3s linear;
-  margin-right: 40px;
-}
-
-nav ul ol:hover {
-  background: #126d9b;
-}
-
-
 
 /******************/
 /*   푸터 영역    */
