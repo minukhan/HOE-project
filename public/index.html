@@ -3,17 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <link href="./img/HOE_logo7.png" rel="shourtcut icon" type="image/x-icon">
-  <link rel="stylesheet" href="hoe.css">
+  <link rel="stylesheet" href="./hoe.css">
   <title>
     HOE
   </title>
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+  <div class="Hide">
+    <!-- 폰트 적용 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,500");
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+      .Roboto-font {
+        font-family: "Roboto", sans-serif;
+      }
+      .Noto-font {
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+    </style>
+    <p class="Roboto-font"></p>
+    <p class="Noto-font"></p>
+  </div>
+  <!-- 회원가입, 로그인 버튼 구현 -->
+  <div class="login">
+    <a href="./signup.html">
+      <button class="login-sign">회원가입</button>
+    </a>
+    <a href="./login.html">
+      <button class="login-in">로그인</button>
+    </a>
+    <a href="#">
+      <button class="login-out">로그아웃</button>
+    </a>
+  </div>  
 </head>
 <body>
   <nav>
     <div class="container">
         <ul>
-            <li><a href="./index.html"><img src="./img/HOE_logo3.png" width="100" height="50"></img></a></li>
+            <li><a href=""><img src="./img/HOE_logo3.png" width="100" height="50"></img></a></li>
             <li> <a href="./게시판.html">게시판<i class='dropdown'></i></a>
                 <ul>
                     <li><a href="./게시판_한경시장.html">한경 시장</a></li>
@@ -35,21 +62,19 @@
                   <li><a href="#">캠퍼스맵</a></li>
                   <li><a href="#">주변 편의시설</a></li>
               </ul>
-            </li>
-            <a href="./signup.html">
-              <button class="login-sign">회원가입</button>              
-            </a>
-            <a href="./login.html">
-              <button class="login-in">로그인</button>              
-            </a>
-            <a href="#">
-              <button class="login-out">로그아웃</button>              
-            </a>    
+            </li>    
         </ul>
       </div>
   </nav>
-<h1>메인 index</h1>
 
+  <div class = "video">
+    <iframe width="1200" height="650" src="https://www.youtube.com/embed/ZpssXhfncZs" 
+    title="🥤한움이 파헤쳐봄! 한경대학교 맛슐랭 가이드 2탄🍽 안성 한경대 카페 추천" 
+    frameborder="0" allow="accelerometer; autoplay=1&mute=1; clipboard-write; 
+    encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
+  
 <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script>
     $('nav li').hover(
@@ -79,18 +104,5 @@
       <img src="./img/btn_top.png" alt="" width="17" height="17">
       <a href="#">TOP</a>
     </div>
-
-    <style>
-      @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,500");
-      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
-      .Roboto-font {
-        font-family: "Roboto", sans-serif;
-      }
-      .Noto-font {
-        font-family: 'Noto Sans KR', sans-serif;
-      }
-    </style>
-    <p class="Roboto-font"></p>
-    <p class="Noto-font"></p>
 </body>
 </html>
