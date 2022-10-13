@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap");
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);
 
 /* main Styles */
 
@@ -105,18 +104,58 @@ nav .dropdown {
 
 
 /* 로그인 버튼 영역 */
-nav ul div {
+
+nav ul a .login-sign{
   position: absolute;
-  top: -4px;
-  left: 1450px;
+  top: 6px;
+  left: 1635px;
+  border: none;
+  display: inline-block;
+  padding: 9px 9px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 600;
+  transition: 0.25s;
 }
 
-nav ul ol {
+nav ul p.login-in input{
+  position: absolute;
+  top: 6px;
+  left: 1725px;
+  border: none;
+  display: inline-block;
+  padding: 9px 9px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+nav ul p.login-out input{
+  position: absolute;
+  top: 6px;
+  left: 1800px;
+  border: none;
+  display: inline-block;
+  padding: 9px 9px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 600;
+  transition: 0.25s;
+}
+/*
+nav ul div li {
   display: inline-block;
   position: relative;
 }
 
-nav ul ol a {
+nav ul div li a {
   color: #fff;
   display: inline-block;
   font-size: 14px;
@@ -125,10 +164,10 @@ nav ul ol a {
   margin-right: 40px;
 }
 
-nav ul ol:hover {
+nav ul div li:hover {
   background: #126d9b;
 }
-
+*/
 
 
 /******************/
@@ -148,10 +187,10 @@ body {
 
 footer {
   position: absolute;
-  width: 1200px; /* 너비 */
-  height: 100px; /* 높이 */
+  width: 100%; /* 너비 */
+  height: 120px; /* 높이 */
   bottom: 0;
-  border-top: 2px solid #222;
+  /*border-top: 2px solid #222;*/
 }
 #bottomMenu {
   width: 100%;

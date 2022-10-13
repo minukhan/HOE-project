@@ -8,6 +8,7 @@
     HOE
   </title>
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+  
 </head>
 <body>
   <nav>
@@ -36,11 +37,15 @@
                   <li><a href="#">주변 편의시설</a></li>
               </ul>
             </li>
-            <div class="login">
-              <ol><a href="./signup.html">회원가입</a></ol>
-              <ol><a href="./login.html">로그인</a></ol>
-              <ol><a href="#">로그아웃</a></ol>
-            </div>      
+            <a href="./signup.html">
+              <button class="login-sign">회원가입</button>              
+            </a>
+            <a href="./login.html">
+              <button class="login-sign">회원가입</button>              
+            </a>
+            <a href="#">
+              <button class="login-sign">회원가입</button>              
+            </a>    
         </ul>
       </div>
   </nav>
@@ -58,10 +63,11 @@
     );
 </script>
   
-  <footer>
+  <footer> 
+    <hr> <!-- <hr> 태그는 수평 줄 만듦 -->
 	  <div class="siteInfo">		
 	  	<span>국립한경대학교 HANKYONG NATIONAL UNIV.</span>		
-	  	<address>(17579) 경기도 안성시 중앙로 327(석정동) <span>Tel  :  031-670-5114</span><i>   /    </i>Fax  :  031-678-4909</address>
+	  	<address><i>(17579) 경기도 안성시 중앙로 327(석정동) Tel  :  031-670-5114 /   Fax  :  031-678-4909</i></address>
 		<div class="snsService">
 			<img src="./img/hk_logo.jpg" alt="" width="17" height="17">
 			<a href="https://www.hknu.ac.kr" title="새창" target="_blank" class="fs_web">학교홈페이지</a>
@@ -74,5 +80,18 @@
       <img src="./img/btn_top.png" alt="" width="17" height="17">
       <a href="#">TOP</a>
     </div>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,500");
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+      .Roboto-font {
+        font-family: "Roboto", sans-serif;
+      }
+      .Noto-font {
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+    </style>
+    <p class="Roboto-font"></p>
+    <p class="Noto-font"></p>
 </body>
 </html>
