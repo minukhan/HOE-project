@@ -176,7 +176,8 @@ nav .dropdown {
 
 .video {
   display: table;
-  margin-top: 4%;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
   margin-left: auto;
   margin-right: auto;
 }
@@ -191,16 +192,18 @@ body {
 }
 
 #wrap {
+  height: auto;
   min-height: 100%;
-  position: relative;
-  padding-bottom: 60px;
+  /* position: relative; */
+  padding-bottom: 40px;
 }
 
 footer {
-  position: absolute;
+  position: relative;
   width: 100%; /* 너비 */
   height: 40px; /* 높이 */
   bottom: 0;
+  /* transform: translateY(-100%); */
   /*border-top: 2px solid #222;*/
 }
 #bottomMenu {
