@@ -109,7 +109,6 @@ h1 {
 
 nav {
   background: #2acaea;
-  /* height: 100px; */
 }
 
 nav ul {
@@ -118,24 +117,18 @@ nav ul {
   padding: 0;
 }
 
-/* 호이 로고
-nav ul ol {
-  position: absolute;
-  top: 10px;
-  right: 400px;
-} */
-
 nav ul li {
   display: inline-block;
   position: relative;
-  /* right: 400px; */
+  right: 200px;
 }
+
 
 nav ul li a {
   color: #fff;
   display: block;
   font-size: 16px;
-  padding: 15px 14px;
+  padding: 20px 20px;
   transition: 0.3s linear;
 }
 
@@ -153,6 +146,7 @@ nav ul li ul {
 nav ul li ul li {
   border-top: 1px solid #444;
   display: block;
+  right: 0px;
 }
 
 nav ul li ul li:first-child {
