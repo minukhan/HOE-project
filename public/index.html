@@ -8,17 +8,39 @@
     HOE
   </title>
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+  <div class="Hide">
+    <!-- 폰트 적용 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,500");
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+      .Roboto-font {
+        font-family: "Roboto", sans-serif;
+      }
+      .Noto-font {
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+    </style>
+    <p class="Roboto-font"></p>
+    <p class="Noto-font"></p>
+  </div>
+  <!-- 회원가입, 로그인 버튼 구현 -->
   <div class="login">
-    <li><a href="./signup.html">회원가입</a></li>
-    <li><a href="./login.html">로그인</a></li>
-    <li><a href="#">로그아웃</a></li>
+    <a href="./signup.html">
+      <button class="login-sign">회원가입</button>
+    </a>
+    <a href="./login.html">
+      <button class="login-in">로그인</button>
+    </a>
+    <a href="#">
+      <button class="login-out">로그아웃</button>
+    </a>
   </div>  
 </head>
 <body>
   <nav>
     <div class="container">
         <ul>
-            <li><a href=""><img src="./img/HOE_logo3.png" width="100" height="50"></img></a></li>
+            <li><a href=""><img src="./img/HOE_logo3.png" width="120" height="60"></img></a></li>
             <li> <a href="./게시판.html">게시판<i class='dropdown'></i></a>
                 <ul>
                     <li><a href="./게시판_한경시장.html">한경 시장</a></li>
@@ -46,7 +68,7 @@
   </nav>
 
   <div class = "video">
-    <iframe width="876" height="493" src="https://www.youtube.com/embed/ZpssXhfncZs" 
+    <iframe width="1200" height="675" src="https://www.youtube.com/embed/ZpssXhfncZs" 
     title="🥤한움이 파헤쳐봄! 한경대학교 맛슐랭 가이드 2탄🍽 안성 한경대 카페 추천" 
     frameborder="0" allow="accelerometer; autoplay=1&mute=1; clipboard-write; 
     encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -65,10 +87,11 @@
     );
 </script>
   
-  <footer>
+  <footer> 
+    <hr> <!-- <hr> 태그는 수평 줄 만듦 -->
 	  <div class="siteInfo">		
 	  	<span>국립한경대학교 HANKYONG NATIONAL UNIV.</span>		
-	  	<address>(17579) 경기도 안성시 중앙로 327(석정동) <span>Tel  :  031-670-5114</span><i>   /    </i>Fax  :  031-678-4909</address>
+	  	<address><i>(17579) 경기도 안성시 중앙로 327(석정동) Tel  :  031-670-5114 /   Fax  :  031-678-4909</i></address>
 		<div class="snsService">
 			<img src="./img/hk_logo.jpg" alt="" width="17" height="17">
 			<a href="https://www.hknu.ac.kr" title="새창" target="_blank" class="fs_web">학교홈페이지</a>
