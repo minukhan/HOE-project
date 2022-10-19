@@ -1,103 +1,116 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LOGIN</title>
-</head>
-<body>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+  </head>
+  <body>
     <!-- 회원가입 폼 -->
 
     <form>
-        <h1>  회원가입 </h1>
+      <h1>회원가입</h1>
 
-        <div> email : <input type="email" id="signUpEmail" /></div>
-        <div> password : <input type ="password" id="signUpPassword" ></div>
-        <button type = "submit" id="signUpButton">회원가입 하기</button>
-        <button>로그인하기</button>
+      <div>email : <input type="email" id="signUpEmail" /></div>
+      <div>password : <input type="password" id="signUpPassword" /></div>
+      <button type="submit" id="signUpButton">회원가입 하기</button>
+      <button>로그인하기</button>
     </form>
     <!-- 로그인 폼 -->
     <form>
-        <h1>  로그인 </h1>
+      <h1>로그인</h1>
 
-        <div> email : <input type="email" id="signInEmail" /></div>
-        <div> password : <input type ="password" id="signInPassword" ></div>
-        <button type = "submit" id="signInButton">로그인 하기</button>
-        <button>회원가입하러가기</button>
+      <div>email : <input type="email" id="signInEmail" /></div>
+      <div>password : <input type="password" id="signInPassword" /></div>
+      <button type="submit" id="signInButton">로그인 하기</button>
+      <button>회원가입하러가기</button>
     </form>
+    <a id="kakao-login-btn"></a>
+    <a href="http://developers.kakao.com/logout"></a>
+    <script type="text/javascript">
+      Kakao.init('d58731fbc636c8787d6cebd5fadad5e1')
+      Kakao.Auth.createLoginButton({
+          container: '#kakao-login-btn',
+          success: function(authObj) {
+              alert(JSON.stringify(authObj));
+          },
+          fail: function(err) {
+              alert(JSON.stringify(err));
+          }
+      });
 
 
-    <!--firebase 연결 하는 코드 -->
+      <!--firebase 연결 하는 코드 -->
 
-    <script type="module">
+      <script type="module">
 
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-analytics.js";
-        
-        const firebaseConfig = {
-          apiKey: "AIzaSyAV7lhpcs4XvGcj18iW50T3VsghqWzHYHs",
-          authDomain: "hoegogo-74d72.firebaseapp.com",
-          projectId: "hoegogo-74d72",
-          storageBucket: "hoegogo-74d72.appspot.com",
-          messagingSenderId: "1060531133504",
-          appId: "1:1060531133504:web:ee1e6f9847496d1c8453a5",
-          measurementId: "G-4Z8MGN9BZY" 
-        };
-      
-        // Initialize Firebase
+          import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
+          import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-analytics.js";
 
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+          const firebaseConfig = {
+            apiKey: "AIzaSyAV7lhpcs4XvGcj18iW50T3VsghqWzHYHs",
+            authDomain: "hoegogo-74d72.firebaseapp.com",
+            projectId: "hoegogo-74d72",
+            storageBucket: "hoegogo-74d72.appspot.com",
+            messagingSenderId: "1060531133504",
+            appId: "1:1060531133504:web:ee1e6f9847496d1c8453a5",
+            measurementId: "G-4Z8MGN9BZY"
+          };
 
-        import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js";
-        
-        const auth = getAuth();
+          // Initialize Firebase
 
-        document.getElementById("signUpButton").addEventListener("click", (event) => {
-            event.preventDefault()
-            const signUpEmail = document.getElementById("signUpEmail").value
-            const signUpPassword = document.getElementById("signUpPassword").value
-            
-                createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword)
-                    .then((userCredential) => {
-                        console.log(userCredential)
-                        const user = userCredential.user;
-                    
-                    })
-                    .catch((error) => {
-                        console.log("error")
-                        const errorCode = error.code;
-                        const errorMessage = error.message;
-                        
-                    });
-        })
-        
+          const app = initializeApp(firebaseConfig);
+          const analytics = getAnalytics(app);
 
-        document.getElementById("signInButton").addEventListener("click", (event) => {
+          import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js";
 
-            event.preventDefault() //폼이 정보를 전달해줄때 새로고침을하는데 그것을 막아주는 역할을 한다.
-            const signInEmail = document.getElementById("signInEmail").value
-            const signInPassword = document.getElementById("signInPassword").value
+          const auth = getAuth();
 
-            signInWithEmailAndPassword(auth, signInEmail, signInPassword)
-                .then((userCredential) => {
-                    console.log(userCredential)
-                    alert("로그인 성공")
-                    const user = userCredential.user;
-                    document.location.href = "./hoe.html";
-                })
-                .catch((error) => {
-                    alert("로그인 실패")
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                });
+          document.getElementById("signUpButton").addEventListener("click", (event) => {
+              event.preventDefault()
+              const signUpEmail = document.getElementById("signUpEmail").value
+              const signUpPassword = document.getElementById("signUpPassword").value
 
-        })
+                  createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword)
+                      .then((userCredential) => {
+                          console.log(userCredential)
+                          const user = userCredential.user;
 
-        console.log("hello hoe")
-        console.log(app)
-      </script>
+                      })
+                      .catch((error) => {
+                          console.log("error")
+                          const errorCode = error.code;
+                          const errorMessage = error.message;
 
-</body>
+                      });
+          })
+
+
+          document.getElementById("signInButton").addEventListener("click", (event) => {
+
+              event.preventDefault() //폼이 정보를 전달해줄때 새로고침을하는데 그것을 막아주는 역할을 한다.
+              const signInEmail = document.getElementById("signInEmail").value
+              const signInPassword = document.getElementById("signInPassword").value
+
+              signInWithEmailAndPassword(auth, signInEmail, signInPassword)
+                  .then((userCredential) => {
+                      console.log(userCredential)
+                      alert("로그인 성공")
+                      const user = userCredential.user;
+                      document.location.href = "./hoe.html";
+                  })
+                  .catch((error) => {
+                      alert("로그인 실패")
+                      const errorCode = error.code;
+                      const errorMessage = error.message;
+                  });
+
+          })
+
+          console.log("hello hoe")
+          console.log(app)
+    </script>
+  </body>
 </html>
