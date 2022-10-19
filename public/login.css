@@ -1,0 +1,35 @@
+div .signup {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+
+    margin-left: -150px;
+    margin-right: -80px;    
+}
+
+div .login {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+
+    margin-left: -150px;
+    margin-right: -80px;    
+}
+
+div .kakao {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin-left: -150px;
+    margin-right: -80px;       
+}
+
+div .naver {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+
+    margin-left: -150px;
+    margin-right: -80px;    
+}
