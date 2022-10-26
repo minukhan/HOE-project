@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="./login.css" />
     <title>LOGIN</title>
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script
@@ -29,91 +29,91 @@
   <body>
     <div>
       <!-- 회원가입 폼 -->
-      <div class = "signup">
+      <div class="signup">
         <form>
           <h1>회원가입</h1>
-  
+
           <div>email : <input type="email" id="signUpEmail" /></div>
           <div>password : <input type="password" id="signUpPassword" /></div>
           <button type="submit" id="signUpButton">회원가입 하기</button>
           <button>로그인하기</button>
         </form>
       </div>
-      
 
-    <!-- 로그인 폼 -->
-    <div class = "login">
-      <form>
-        <h1>로그인</h1>
+      <!-- 로그인 폼 -->
+      <div class="login">
+        <form>
+          <h1>로그인</h1>
 
-        <div>email : <input type="email" id="signInEmail" /></div>
-        <div>password : <input type="password" id="signInPassword" /></div>
-        <button type="submit" id="signInButton">로그인 하기</button>
-        <button>회원가입하러가기</button>
-      </form>
-    </div>
+          <div>email : <input type="email" id="signInEmail" /></div>
+          <div>password : <input type="password" id="signInPassword" /></div>
+          <button type="submit" id="signInButton">로그인 하기</button>
+          <button>회원가입하러가기</button>
+        </form>
+      </div>
 
-    <script> document.write("<br>")</script>
-
-    <!-- ********** -->
-    <!-- 로그인 API -->
-    <!-- ********** -->
-
-    <!-- 카카오 로그인 -->
-    <div class = "kakao">
-      <div id="kakao-login-btn"></div>
-      <a href="http://developers.kakao.com/logout"></a>
-  
-      <script type="text/javascript">
-        Kakao.init("d58731fbc636c8787d6cebd5fadad5e1");
-        Kakao.Auth.createLoginButton({
-          container: "#kakao-login-btn",
-          success: function (authObj) {
-            alert(JSON.stringify(authObj));
-          },
-          fail: function (err) {
-            alert(JSON.stringify(err));
-          },
-        });
+      <script>
+        document.write("<br>");
       </script>
+
+      <!-- ********** -->
+      <!-- 로그인 API -->
+      <!-- ********** -->
+
+      <!-- 카카오 로그인 -->
+      <div class="kakao">
+        <div id="kakao-login-btn"></div>
+        <a href="http://developers.kakao.com/logout"></a>
+
+        <script type="text/javascript">
+          Kakao.init("d58731fbc636c8787d6cebd5fadad5e1");
+          Kakao.Auth.createLoginButton({
+            container: "#kakao-login-btn",
+            success: function (authObj) {
+              alert(JSON.stringify(authObj));
+            },
+            fail: function (err) {
+              alert(JSON.stringify(err));
+            },
+          });
+        </script>
+      </div>
+
+      <!-- 네이버 로그인  -->
+      <div class="naver">
+        <div id="naver_id_login"></div>
+
+        <script type="text/javascript">
+          var naver_id_login = new naver_id_login(
+            "KvFcuU69MLQ21X9vLBqH", //key값
+            "https://hoeproject-38485.firebaseapp.com" //callback url
+          );
+          var state = naver_id_login.getUniqState();
+          naver_id_login.setButton("white", 2, 40);
+          naver_id_login.setDomain("https://hoeproject-38485.firebaseapp.com");
+          naver_id_login.setState(state);
+          naver_id_login.setPopup();
+          naver_id_login.init_naver_id_login();
+        </script>
+
+        <script type="text/javascript">
+          var naver_id_login = new naver_id_login(
+            "KvFcuU69MLQ21X9vLBqH", //key값
+            "https://hoeproject-38485.firebaseapp.com" //callback url
+          );
+          // 접근 토큰 값 출력
+          alert(naver_id_login.oauthParams.access_token);
+          // 네이버 사용자 프로필 조회
+          naver_id_login.get_naver_userprofile("naverSignInCallback()");
+          // 네이버 사용자 프로필 조회 이후 프로필 정보를 처리할 callback function
+          function naverSignInCallback() {
+            alert(naver_id_login.getProfileData("email"));
+            alert(naver_id_login.getProfileData("nickname"));
+            alert(naver_id_login.getProfileData("age"));
+          }
+        </script>
+      </div>
     </div>
-
-    <!-- 네이버 로그인  -->
-    <div class = "naver">
-      <div id="naver_id_login"></div>
-
-      <script type="text/javascript">
-        var naver_id_login = new naver_id_login(
-          "KvFcuU69MLQ21X9vLBqH", //key값
-          "https://hoeproject-38485.firebaseapp.com" //callback url
-        );
-        var state = naver_id_login.getUniqState();
-        naver_id_login.setButton("white", 2, 40);
-        naver_id_login.setDomain("https://hoeproject-38485.firebaseapp.com");
-        naver_id_login.setState(state);
-        naver_id_login.setPopup();
-        naver_id_login.init_naver_id_login();
-      </script>
-  
-      <script type="text/javascript">
-        var naver_id_login = new naver_id_login(
-          "KvFcuU69MLQ21X9vLBqH", //key값
-          "https://hoeproject-38485.firebaseapp.com" //callback url
-        );
-        // 접근 토큰 값 출력
-        alert(naver_id_login.oauthParams.access_token);
-        // 네이버 사용자 프로필 조회
-        naver_id_login.get_naver_userprofile("naverSignInCallback()");
-        // 네이버 사용자 프로필 조회 이후 프로필 정보를 처리할 callback function
-        function naverSignInCallback() {
-          alert(naver_id_login.getProfileData("email"));
-          alert(naver_id_login.getProfileData("nickname"));
-          alert(naver_id_login.getProfileData("age"));
-        }
-      </script>
-    </div>
-  </div>
-
 
     <!-- firebase 연결 하는 코드 -->
     <script type="module">
