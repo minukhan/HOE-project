@@ -40,6 +40,28 @@ h1 {
 
 /* 로그인 버튼 영역 */
 
+.login a .data {
+  position: absolute;
+  top: 6px;
+  left: 79vw;
+  /* left: 1725px; */
+  border: none;
+  display: inline-block;
+  padding: 9px 9px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.login a .data:hover {
+  
+  color:#2acaea;
+  cursor: pointer;
+}
+
 .login a .login-sign {
   position: absolute;
   top: 6px;
