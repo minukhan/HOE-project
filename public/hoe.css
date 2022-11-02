@@ -126,6 +126,7 @@ nav ul li {
   right: 200px;
 }
 
+
 nav ul li a {
   color: #fff;
   display: block;
@@ -138,42 +139,6 @@ nav ul li:hover {
   background: #126d9b;
 }
 
-nav ul div .btn {
-  background-color: #2acaea;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-nav ul .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-nav ul div .dropdown-menu {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-nav ul div .dropdown-menu a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-nav ul div .dropdown-menu a:hover {background-color: #ddd;}
-
-nav ul div .dropdown:hover .dropdown-menu {display: block;}
-
-nav ul div .dropdown:hover .btn {background-color: #fff;}
-
-/* 
 nav ul li ul {
   border-bottom: 5px solid #2ba0db;
   display: none;
@@ -203,7 +168,7 @@ nav ul li ul li a:hover {
 
 nav .dropdown {
   margin-left: 6px;
-} */
+}
 
 /******************/
 /*   바디 영역    */
