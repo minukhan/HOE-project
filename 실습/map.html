@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./지도.css">
+  <title>지도</title>
+  <nav>
+    <ul id="topMenu">
+      <li><a href="./index.html"><img src="./img/HOE_logo3.png" width="100" height="50"></img></a></li>
+      <li><a href="">캠퍼스맵</a></li> <!-- a href = "버튼 누르면 들어가는 링크"  -->
+      <li><a href="">주변 편의시설</li>
+    </ul>
+  </nav>
+</head>
+<body>
+  <div id="map" style="width:100%;height:500px;"></div>
+  <div class="buildingList">
+    <ul>
+      <li>
+        <button onclick="penTo()">인문사회과학관</button>
+      </li>
+
+      <li>
+        <input type="hidden" name="longitude" id="longitude_2" value="127.26170844943164" />
+        <input type="hidden" name="latitude" id="latitude_2" value="37.01189447774363" />
+        <a href="#none" onclick="javascriptsetCenter(longitude_2, latitude_2);">자연과학관</a>
+      </li>
+
+      <li>
+        <input type="hidden" name="longitude" id="longitude_3" value="127.2630653592444" />
+        <input type="hidden" name="latitude" id="latitude_3" value="37.012749754580156" />
+        <a href="#none" onclick="javascript:setCenter(longitude_3, latitude_3);">제1농학관관</a>
+        <!-- a에 붙여주세요~class="active" -->
+      </li>
+    </ul>
+  </div>
+
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d58731fbc636c8787d6cebd5fadad5e1"></script>
+  <script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(37.0117, 127.2642), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+var map = new kakao.maps.Map(mapContainer, mapOption);   
+  </script>
+ 
+</body>
+
+</html>

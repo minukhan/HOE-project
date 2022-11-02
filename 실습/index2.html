@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <link href="./img/HOE_logo7.png" rel="shourtcut icon" type="image/x-icon">
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./hoe.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script scr="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script scr="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script scr="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
   <title>
     HOE
   </title>
@@ -25,9 +29,6 @@
   </div>
   <!-- 회원가입, 로그인 버튼 구현 -->
   <div class="login">
-    <a href="회원가입틀.html">
-      <button class="data">회원정보 입력</button>
-    </a>
     <a href="./signup.html">
       <button class="login-sign">회원가입</button>
     </a>
@@ -44,28 +45,31 @@
     <div class="container">
         <ul>
             <li><a href=""><img src="./img/HOE_logo3.png" width="120" height="60"></img></a></li>
-            <li> <a href="./게시판.html">게시판<i class='dropdown'></i></a>
-                <ul>
-                    <li><a href="./게시판_한경시장.html">한경 시장</a></li>
-                    <li><a href="./게시판_졸업생어울림.html">졸업생 어울림</a></li>
-                    <li><a href="./게시판_취업마당.html">취업 마당</a></li>
-                    <li><a href="./게시판_스터디프로젝트.html">스터디 & 프로젝트</a></li>
-                </ul>
-            </li>
-            <li> <a href="./지도.html">지도<i class='dropdown'></i></a>
-              <ul>
-                  <li><a href="#">캠퍼스맵</a></li>
-                  <li><a href="#">주변 편의시설</a></li>
-              </ul>
-            </li>
-            <li> <a href="./캘린더22.html">캘린더<i class='dropdown'></i></a>
-            </li>
-            <li> <a href="./학적.html">학적<i class='dropdown'></i></a>
-              <ul>
-                  <li><a href="#">캠퍼스맵</a></li>
-                  <li><a href="#">주변 편의시설</a></li>
-              </ul>
-            </li>    
+            <div class="dropdown">
+
+              <button class="btn"><a href="./게시판.html">게시판</a></button>
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./게시판_한경시장.html">한경 시장</a>
+                  <a class="dropdown-item" href="./게시판_졸업생어울림.html">졸업생 어울림</a>
+                  <a class="dropdown-item" href="./게시판_취업마당.html">취업 마당</a>
+                  <a class="dropdown-item" href="./게시판_스터디프로젝트.html">스터디 & 프로젝트</a>
+              </div>
+
+              <button class="btn"><a href="./지도.html">지도</a></button>
+              <div class="dropdown-menu">
+                <a href="#">캠퍼스맵</a>
+                <a href="#">주변 편의시설</a>
+              </div>
+
+              <button class="btn"><a href="./캘린더22.html">캘린더</a></button>
+
+              <button class="btn"><a href="./학적.html">학적</a></button>
+              <div class="dropdown-menu">
+                <a href="#">캠퍼스맵</a>
+                <a href="#">주변 편의시설</a>
+              </div>
+              
+            </div>
         </ul>
       </div>
   </nav>
@@ -104,9 +108,8 @@
 		  <a href="https://www.instagram.com/with_hknu" title="새창" target="_blank" class="fS_insta">인스타그램</a>
 		</div>
 	  <div class="goTop">
-      <img src="./img/btn_top.png" alt="" width="17" height="17">
+      <img src="./img_top.png" alt="" width="17" height="17">
       <a href="#">TOP</a>
     </div>
 </body>
 </html>
-
