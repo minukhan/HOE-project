@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./index.css">
@@ -16,448 +14,61 @@
 </head>
 
 <body>
-  <div id="map" style="width:500px;height:400px;"></div>
-  <script type="text/javascript"
-    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d58731fbc636c8787d6cebd5fadad5e1&libraries=services,clusterer,drawing"></script>
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d58731fbc636c8787d6cebd5fadad5e1"></script>
-  <script>
-    var container = document.getElementById('map');
-    var options = {
-      center: new kakao.maps.LatLng(37.0117, 127.2642),
-      level: 3
-    };
-
-    var map = new kakao.maps.Map(container, options);
-
-    var markerPosition = new daum.maps.LatLng(
-      latitude,
-      longitude
-    );
-    var marker = new daum.maps.Marker({
-      position: markerPosition,
-    });
-    marker.setMap(map);
-
-    var mapTypeControl = new daum.maps.MapTypeControl();
-    map.addControl(
-      mapTypeControl,
-      daum.maps.ControlPosition.TOPRIGHT
-    );
-    var zoomControl = new daum.maps.ZoomControl();
-    map.addControl(
-      zoomControl,
-      daum.maps.ControlPosition.RIGHT
-    );
-  </script>
+  <div id="map" style="width:100%;height:400px;"></div>
   <div class="buildingList">
-    <ul>
-      <li>
+    <!--
         <input type="hidden" name="longitude" id="longitude_1" value="127.26318833079759" />
         <input type="hidden" name="latitude" id="latitude_1" value="37.01093831526075" />
-        <input type="hidden" name="imgPath" id="imgPath_1" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_1" value="temp_1568878993049100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_1" value="07_인문사회관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_1" value="25" />
-        <input type="hidden" name="fnctNo" id="fnctNo_1" value="3" />
-        <input type="hidden" name="siteId" id="siteId_1" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_1" value="인문융합공공인재학부(문예창작미디어콘텐츠홍보전공)" />
-        <a href="#none" onclick="javascript:view_cn('1');">인문융합공공인재학부(문예창작미디어콘텐츠홍보전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
+        -->
+    <button onclick="penTo()">인문사회과학관</button>
 
-      <li>
-        <input type="hidden" name="longitude" id="longitude_2" value="127.26318833079759" />
-        <input type="hidden" name="latitude" id="latitude_2" value="37.01093831526075" />
-        <input type="hidden" name="imgPath" id="imgPath_2" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_2" value="temp_1568878972257100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_2" value="07_인문사회관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_2" value="24" />
-        <input type="hidden" name="fnctNo" id="fnctNo_2" value="3" />
-        <input type="hidden" name="siteId" id="siteId_2" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_2" value="인문융합공공인재학부(영미언어문화전공)" />
-        <a href="#none" onclick="javascript:view_cn('2');">인문융합공공인재학부(영미언어문화전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
+    <li>
+      <input type="hidden" name="longitude" id="longitude_2" value="127.26170844943164" />
+      <input type="hidden" name="latitude" id="latitude_2" value="37.01189447774363" />
+      <a href="#none" onclick="javascriptsetCenter(longitude_2, latitude_2);">자연과학관</a>
+    </li>
 
-      <li>
-        <input type="hidden" name="longitude" id="longitude_3" value="127.26318833079759" />
-        <input type="hidden" name="latitude" id="latitude_3" value="37.01093831526075" />
-        <input type="hidden" name="imgPath" id="imgPath_3" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_3" value="temp_1568878927946100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_3" value="07_인문사회관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_3" value="22" />
-        <input type="hidden" name="fnctNo" id="fnctNo_3" value="3" />
-        <input type="hidden" name="siteId" id="siteId_3" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_3" value="인문융합공공인재학부(공공행정전공)" />
-        <a href="#none" onclick="javascript:view_cn('3');">인문융합공공인재학부(공공행정전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_4" value="127.26318833079759" />
-        <input type="hidden" name="latitude" id="latitude_4" value="37.01093831526075" />
-        <input type="hidden" name="imgPath" id="imgPath_4" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_4" value="temp_1568878949531100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_4" value="07_인문사회관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_4" value="23" />
-        <input type="hidden" name="fnctNo" id="fnctNo_4" value="3" />
-        <input type="hidden" name="siteId" id="siteId_4" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_4" value="법경영학부(법학전공)" />
-        <a href="#none" onclick="javascript:view_cn('4');">법경영학부(법학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_5" value="127.26318833079759" />
-        <input type="hidden" name="latitude" id="latitude_5" value="37.01093831526075" />
-        <input type="hidden" name="imgPath" id="imgPath_5" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_5" value="temp_1568878897964100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_5" value="07_인문사회관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_5" value="21" />
-        <input type="hidden" name="fnctNo" id="fnctNo_5" value="3" />
-        <input type="hidden" name="siteId" id="siteId_5" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_5" value="법경영학부(경영학전공)" />
-        <a href="#none" onclick="javascript:view_cn('5');">법경영학부(경영학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_6" value="127.26170844943164" />
-        <input type="hidden" name="latitude" id="latitude_6" value="37.01189447774363" />
-        <input type="hidden" name="imgPath" id="imgPath_6" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_6" value="temp_1568878663167100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_6" value="08_자연과학관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_6" value="15" />
-        <input type="hidden" name="fnctNo" id="fnctNo_6" value="3" />
-        <input type="hidden" name="siteId" id="siteId_6" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_6" value="웰니스산업융합학부(의류산업학전공)" />
-        <a href="#none" onclick="javascript:view_cn('6');">웰니스산업융합학부(의류산업학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_7" value="127.26170844943164" />
-        <input type="hidden" name="latitude" id="latitude_7" value="37.01189447774363" />
-        <input type="hidden" name="imgPath" id="imgPath_7" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_7" value="temp_1568878766649100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_7" value="08_자연과학관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_7" value="17" />
-        <input type="hidden" name="fnctNo" id="fnctNo_7" value="3" />
-        <input type="hidden" name="siteId" id="siteId_7" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_7" value="웰니스산업융합학부(아동가족복지학전공)" />
-        <a href="#none" onclick="javascript:view_cn('7');">웰니스산업융합학부(아동가족복지학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_8" value="127.26170844943164" />
-        <input type="hidden" name="latitude" id="latitude_8" value="37.01189447774363" />
-        <input type="hidden" name="imgPath" id="imgPath_8" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_8" value="temp_1568878730229100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_8" value="08_자연과학관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_8" value="16" />
-        <input type="hidden" name="fnctNo" id="fnctNo_8" value="3" />
-        <input type="hidden" name="siteId" id="siteId_8" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_8" value="웰니스산업융합학부(식품영양학전공)" />
-        <a href="#none" onclick="javascript:view_cn('8');">웰니스산업융합학부(식품영양학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_9" value="127.26170844943164" />
-        <input type="hidden" name="latitude" id="latitude_9" value="37.01189447774363" />
-        <input type="hidden" name="imgPath" id="imgPath_9" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_9" value="temp_1568878838517100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_9" value="08_자연과학관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_9" value="19" />
-        <input type="hidden" name="fnctNo" id="fnctNo_9" value="3" />
-        <input type="hidden" name="siteId" id="siteId_9" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_9" value="웰니스산업융합학부(웰니스스포츠과학전공)" />
-        <a href="#none" onclick="javascript:view_cn('9');">웰니스산업융합학부(웰니스스포츠과학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_10" value="127.2630653592444" />
-        <input type="hidden" name="latitude" id="latitude_10" value="37.012749754580156" />
-        <input type="hidden" name="imgPath" id="imgPath_10" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_10" value="temp_1568855781666100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_10" value="05_제1농학관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_10" value="1" />
-        <input type="hidden" name="fnctNo" id="fnctNo_10" value="3" />
-        <input type="hidden" name="siteId" id="siteId_10" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_10" value="식물자원조경학부(식물생명환경전공)" />
-        <a href="#none" onclick="javascript:view_cn('10');">식물자원조경학부(식물생명환경전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_11" value="127.26170844943164" />
-        <input type="hidden" name="latitude" id="latitude_11" value="37.01189447774363" />
-        <input type="hidden" name="imgPath" id="imgPath_11" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_11" value="temp_1568878624011100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_11" value="08_자연과학관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_11" value="14" />
-        <input type="hidden" name="fnctNo" id="fnctNo_11" value="3" />
-        <input type="hidden" name="siteId" id="siteId_11" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_11" value="식물자원조경학부(조경학전공)" />
-        <a href="#none" onclick="javascript:view_cn('11');">식물자원조경학부(조경학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_12" value="127.26521443555164" />
-        <input type="hidden" name="latitude" id="latitude_12" value="37.010361620438815" />
-        <input type="hidden" name="imgPath" id="imgPath_12" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_12" value="temp_1568877259493100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_12" value="06_축산기술지원센터.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_12" value="2" />
-        <input type="hidden" name="fnctNo" id="fnctNo_12" value="3" />
-        <input type="hidden" name="siteId" id="siteId_12" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_12" value="동물생명융합학부" />
-        <a href="#none" onclick="javascript:view_cn('12');">동물생명융합학부</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_13" value="127.2630653592444" />
-        <input type="hidden" name="latitude" id="latitude_13" value="37.012749754580156" />
-        <input type="hidden" name="imgPath" id="imgPath_13" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_13" value="temp_1568877387523100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_13" value="05_제1농학관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_13" value="3" />
-        <input type="hidden" name="fnctNo" id="fnctNo_13" value="3" />
-        <input type="hidden" name="siteId" id="siteId_13" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_13" value="생명공학부(원예생명공학전공)" />
-        <a href="#none" onclick="javascript:view_cn('13');">생명공학부(원예생명공학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_14" value="127.26521443555164" />
-        <input type="hidden" name="latitude" id="latitude_14" value="37.010361620438815" />
-        <input type="hidden" name="imgPath" id="imgPath_14" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_14" value="temp_1568877634677100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_14" value="06_축산기술지원센터.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_14" value="5" />
-        <input type="hidden" name="fnctNo" id="fnctNo_14" value="3" />
-        <input type="hidden" name="siteId" id="siteId_14" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_14" value="생명공학부(응용생명공학전공)" />
-        <a href="#none" onclick="javascript:view_cn('14');">생명공학부(응용생명공학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_15" value="127.26524280175805" />
-        <input type="hidden" name="latitude" id="latitude_15" value="37.0120578363988" />
-        <input type="hidden" name="imgPath" id="imgPath_15" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_15" value="temp_1568877723985100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_15" value="04_제3공학관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_15" value="6" />
-        <input type="hidden" name="fnctNo" id="fnctNo_15" value="3" />
-        <input type="hidden" name="siteId" id="siteId_15" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_15" value="건설환경공학부(토목공학전공)" />
-        <a href="#none" onclick="javascript:view_cn('15');">건설환경공학부(토목공학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_16" value="127.26512594120191" />
-        <input type="hidden" name="latitude" id="latitude_16" value="37.01076279791222" />
-        <input type="hidden" name="imgPath" id="imgPath_16" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_16" value="temp_1568882319665100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_16" value="03_제2공학관.JPG" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_16" value="52" />
-        <input type="hidden" name="fnctNo" id="fnctNo_16" value="3" />
-        <input type="hidden" name="siteId" id="siteId_16" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_16" value="건설환경공학부(환경공학전공)" />
-        <a href="#none" onclick="javascript:view_cn('16');">건설환경공학부(환경공학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_17" value="127.2630653592444" />
-        <input type="hidden" name="latitude" id="latitude_17" value="37.012749754580156" />
-        <input type="hidden" name="imgPath" id="imgPath_17" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_17" value="temp_1568877522098100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_17" value="05_제1농학관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_17" value="4" />
-        <input type="hidden" name="fnctNo" id="fnctNo_17" value="3" />
-        <input type="hidden" name="siteId" id="siteId_17" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_17" value="사회안전시스템공학부(지역시스템공학전공)" />
-        <a href="#none" onclick="javascript:view_cn('17');">사회안전시스템공학부(지역시스템공학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_18" value="127.26524280175805" />
-        <input type="hidden" name="latitude" id="latitude_18" value="37.0120578363988" />
-        <input type="hidden" name="imgPath" id="imgPath_18" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_18" value="temp_1568882297737100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_18" value="04_제3공학관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_18" value="51" />
-        <input type="hidden" name="fnctNo" id="fnctNo_18" value="3" />
-        <input type="hidden" name="siteId" id="siteId_18" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_18" value="사회안전시스템공학부(안전시스템공학전공)" />
-        <a href="#none" onclick="javascript:view_cn('18');">사회안전시스템공학부(안전시스템공학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_19" value="127.26512594120191" />
-        <input type="hidden" name="latitude" id="latitude_19" value="37.01076279791222" />
-        <input type="hidden" name="imgPath" id="imgPath_19" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_19" value="temp_1568878113634100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_19" value="03_제2공학관.JPG" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_19" value="9" />
-        <input type="hidden" name="fnctNo" id="fnctNo_19" value="3" />
-        <input type="hidden" name="siteId" id="siteId_19" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_19" value="식품생명화학공학부(식품생명공학전공)" />
-        <a href="#none" onclick="javascript:view_cn('19');">식품생명화학공학부(식품생명공학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_20" value="127.26565341683457" />
-        <input type="hidden" name="latitude" id="latitude_20" value="37.01139237305407" />
-        <input type="hidden" name="imgPath" id="imgPath_20" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_20" value="temp_1568878064122100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_20" value="02_제1공학관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_20" value="8" />
-        <input type="hidden" name="fnctNo" id="fnctNo_20" value="3" />
-        <input type="hidden" name="siteId" id="siteId_20" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_20" value="식품생명화학공학부(화학공학전공)" />
-        <a href="#none" onclick="javascript:view_cn('20');">식품생명화학공학부(화학공학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_21" value="127.26565341683457" />
-        <input type="hidden" name="latitude" id="latitude_21" value="37.01139237305407" />
-        <input type="hidden" name="imgPath" id="imgPath_21" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_21" value="temp_1568878156076100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_21" value="02_제1공학관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_21" value="10" />
-        <input type="hidden" name="fnctNo" id="fnctNo_21" value="3" />
-        <input type="hidden" name="siteId" id="siteId_21" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_21" value="컴퓨터응용수학부(소프트웨어&amp;서비스컴퓨팅전공)" />
-        <a href="#none" onclick="javascript:view_cn('21');">컴퓨터응용수학부(소프트웨어&amp;서비스컴퓨팅전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_22" value="127.26512594120191" />
-        <input type="hidden" name="latitude" id="latitude_22" value="37.01076279791222" />
-        <input type="hidden" name="imgPath" id="imgPath_22" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_22" value="temp_1568882333420100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_22" value="03_제2공학관.JPG" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_22" value="53" />
-        <input type="hidden" name="fnctNo" id="fnctNo_22" value="3" />
-        <input type="hidden" name="siteId" id="siteId_22" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_22" value="컴퓨터응용수학부(소프트웨어융합전공)" />
-        <a href="#none" onclick="javascript:view_cn('22');">컴퓨터응용수학부(소프트웨어융합전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_23" value="127.26170844943164" />
-        <input type="hidden" name="latitude" id="latitude_23" value="37.01189447774363" />
-        <input type="hidden" name="imgPath" id="imgPath_23" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_23" value="temp_1568878814992100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_23" value="08_자연과학관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_23" value="18" />
-        <input type="hidden" name="fnctNo" id="fnctNo_23" value="3" />
-        <input type="hidden" name="siteId" id="siteId_23" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_23" value="컴퓨터응용수학부(응용수학전공)" />
-        <a href="#none" onclick="javascript:view_cn('23');">컴퓨터응용수학부(응용수학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_24" value="127.26410275969763" />
-        <input type="hidden" name="latitude" id="latitude_24" value="37.01299524700751" />
-        <input type="hidden" name="imgPath" id="imgPath_24" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_24" value="temp_1582183431830100.jpg.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_24" value="temp_1568878560050100.tmp.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_24" value="13" />
-        <input type="hidden" name="fnctNo" id="fnctNo_24" value="3" />
-        <input type="hidden" name="siteId" id="siteId_24" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_24" value="ICT로봇기계공학부(기계공학전공)" />
-        <a href="#none" onclick="javascript:view_cn('24');">ICT로봇기계공학부(기계공학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_25" value="127.26565341683457" />
-        <input type="hidden" name="latitude" id="latitude_25" value="37.01139237305407" />
-        <input type="hidden" name="imgPath" id="imgPath_25" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_25" value="temp_1633672541403100.jpg.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_25" value="temp_1568878064122100.tmp.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_25" value="86" />
-        <input type="hidden" name="fnctNo" id="fnctNo_25" value="3" />
-        <input type="hidden" name="siteId" id="siteId_25" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_25" value="ICT로봇기계공학부(ICT로봇공학전공)" />
-        <a href="#none" onclick="javascript:view_cn('25');">ICT로봇기계공학부(ICT로봇공학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_26" value="127.26565341683457" />
-        <input type="hidden" name="latitude" id="latitude_26" value="37.01139237305407" />
-        <input type="hidden" name="imgPath" id="imgPath_26" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_26" value="temp_1568878191759100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_26" value="02_제1공학관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_26" value="11" />
-        <input type="hidden" name="fnctNo" id="fnctNo_26" value="3" />
-        <input type="hidden" name="siteId" id="siteId_26" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_26" value="전자전기공학부" />
-        <a href="#none" onclick="javascript:view_cn('26');">전자전기공학부</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_27" value="127.26525410052235" />
-        <input type="hidden" name="latitude" id="latitude_27" value="37.01207583270466" />
-        <input type="hidden" name="imgPath" id="imgPath_27" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_27" value="temp_1568878217306100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_27" value="04_제3공학관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_27" value="12" />
-        <input type="hidden" name="fnctNo" id="fnctNo_27" value="3" />
-        <input type="hidden" name="siteId" id="siteId_27" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_27" value="디자인건축융합학부(디자인전공)" />
-        <a href="#none" onclick="javascript:view_cn('27');">디자인건축융합학부(디자인전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_28" value="127.26524280175805" />
-        <input type="hidden" name="latitude" id="latitude_28" value="37.0120578363988" />
-        <input type="hidden" name="imgPath" id="imgPath_28" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_28" value="temp_1568878026146100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_28" value="04_제3공학관.jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_28" value="7" />
-        <input type="hidden" name="fnctNo" id="fnctNo_28" value="3" />
-        <input type="hidden" name="siteId" id="siteId_28" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_28" value="디자인건축융합학부(건축학전공/건축공학전공)" />
-        <a href="#none" onclick="javascript:view_cn('28');">디자인건축융합학부(건축학전공/건축공학전공)</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-
-      <li>
-        <input type="hidden" name="longitude" id="longitude_29" value="127.26094322496421" />
-        <input type="hidden" name="latitude" id="latitude_29" value="37.01237598666575" />
-        <input type="hidden" name="imgPath" id="imgPath_29" value="/sites/kor/atchmnfl/imgMap/3/" />
-        <input type="hidden" name="changeNm" id="changeNm_29" value="temp_1568879037803100.tmp.jpg" />
-        <input type="hidden" name="orginlNm" id="orginlNm_29" value="23_미래융합기술연구센터(본관).jpg" />
-        <input type="hidden" name="imgMapArtclSeq" id="imgMapArtclSeq_29" value="26" />
-        <input type="hidden" name="fnctNo" id="fnctNo_29" value="3" />
-        <input type="hidden" name="siteId" id="siteId_29" value="kor" />
-        <input type="hidden" name="artclSj" id="artclSj_29" value="브라이트 칼리지" />
-        <a href="#none" onclick="javascript:view_cn('29');">브라이트 칼리지</a>
-        <!-- a에 붙여주세요~class="active" -->
-      </li>
-    </ul>
+    <li>
+      <input type="hidden" name="longitude" id="longitude_3" value="127.2630653592444" />
+      <input type="hidden" name="latitude" id="latitude_3" value="37.012749754580156" />
+      <a href="#none" onclick="javascript:setCenter(longitude_3, latitude_3);">제1농학관관</a>
+      <!-- a에 붙여주세요~class="active" -->
+    </li>
   </div>
+
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d58731fbc636c8787d6cebd5fadad5e1"></script>
+  <script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+      mapOption = {
+        center: new kakao.maps.LatLng(37.0117, 127.2642), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+      };
+
+    // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+
+    // 마커가 표시될 위치입니다 
+    var markerPosition = new kakao.maps.LatLng(37.0117, 127.2642);
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+      position: markerPosition
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+
+    // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+    // marker.setMap(null);  
+    function panTo() {
+      // 이동할 위도 경도 위치를 생성합니다 
+      var moveLatLon = new kakao.maps.LatLng(37.01093831526075, 127.26318833079759);
+
+      // 지도 중심을 부드럽게 이동시킵니다
+      // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+      map.panTo(moveLatLon);
+    }         
+  </script>
 </body>
 
 </html>
