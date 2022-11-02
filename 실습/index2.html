@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <link href="./img/HOE_logo7.png" rel="shourtcut icon" type="image/x-icon">
+  <link rel="stylesheet" href="./hoe.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script scr="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script scr="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script scr="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <title>
+    HOE
+  </title>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+  <div class="Hide">
+    <!-- 폰트 적용 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,500");
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+      .Roboto-font {
+        font-family: "Roboto", sans-serif;
+      }
+      .Noto-font {
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+    </style>
+    <p class="Roboto-font"></p>
+    <p class="Noto-font"></p>
+  </div>
+  <!-- 회원가입, 로그인 버튼 구현 -->
+  <div class="login">
+    <a href="./signup.html">
+      <button class="login-sign">회원가입</button>
+    </a>
+    <a href="./login.html">
+      <button class="login-in">로그인</button>
+    </a>
+    <a href="#">
+      <button class="login-out">로그아웃</button>
+    </a>
+  </div>  
+</head>
+<body>
+  <nav>
+    <div class="container">
+        <ul>
+            <li><a href=""><img src="./img/HOE_logo3.png" width="120" height="60"></img></a></li>
+            <div class="dropdown">
+
+              <button class="btn"><a href="./게시판.html">게시판</a></button>
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./게시판_한경시장.html">한경 시장</a>
+                  <a class="dropdown-item" href="./게시판_졸업생어울림.html">졸업생 어울림</a>
+                  <a class="dropdown-item" href="./게시판_취업마당.html">취업 마당</a>
+                  <a class="dropdown-item" href="./게시판_스터디프로젝트.html">스터디 & 프로젝트</a>
+              </div>
+
+              <button class="btn"><a href="./지도.html">지도</a></button>
+              <div class="dropdown-menu">
+                <a href="#">캠퍼스맵</a>
+                <a href="#">주변 편의시설</a>
+              </div>
+
+              <button class="btn"><a href="./캘린더22.html">캘린더</a></button>
+
+              <button class="btn"><a href="./학적.html">학적</a></button>
+              <div class="dropdown-menu">
+                <a href="#">캠퍼스맵</a>
+                <a href="#">주변 편의시설</a>
+              </div>
+              
+            </div>
+        </ul>
+      </div>
+  </nav>
+<!-- 120045 675700 -->
+  <div class = "video">
+    <iframe width="1200vw" height="675vw" src="https://www.youtube.com/embed/ZpssXhfncZs" 
+    title="🥤한움이 파헤쳐봄! 한경대학교 맛슐랭 가이드 2탄🍽 안성 한경대 카페 추천" 
+    frameborder="0" allow="accelerometer; autoplay=1&mute=1; clipboard-write; 
+    encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
+  
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    $('nav li').hover(
+        function() {
+            $('ul', this).stop().slideDown(200);
+        },
+        function() {
+            $('ul', this).stop().slideUp(200);
+        }
+    );
+</script>
+  
+  <footer> 
+    <hr> <!-- <hr> 태그는 수평 줄 만듦 -->
+	  <div class="siteInfo">		
+	  	<span>국립한경대학교 HANKYONG NATIONAL UNIV.</span>		
+	  	<address><i>(17579) 경기도 안성시 중앙로 327(석정동) Tel  :  031-670-5114 /   Fax  :  031-678-4909</i></address>
+		<div class="snsService">
+			<img src="./img/hk_logo.jpg" alt="" width="17" height="17">
+			<a href="https://www.hknu.ac.kr" title="새창" target="_blank" class="fs_web">학교홈페이지</a>
+			<img src="./img/naver_blog.png" alt="" width="17" height="17">
+		  <a href="https://blog.naver.com/hknu7" title="새창" target="_blank" class="fS_blog">블로그</a>
+			<img src="./img/instagram.png" alt="" width="17" height="17">
+		  <a href="https://www.instagram.com/with_hknu" title="새창" target="_blank" class="fS_insta">인스타그램</a>
+		</div>
+	  <div class="goTop">
+      <img src="./img_top.png" alt="" width="17" height="17">
+      <a href="#">TOP</a>
+    </div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 div .signup {
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 50%;
 
     margin-left: -150px;
@@ -18,16 +18,16 @@ div .login {
 
 div .kakao {
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 50%;
-    border: solid 1px gray; ;
+    /* border: solid 1px gray; ; */
     margin-left: -150px;
     margin-right: -80px;       
 }
 
 div .naver {
     position: absolute;
-    top: 60%;
+    top: 53%;
     left: 50%;
 
     margin-left: -150px;
