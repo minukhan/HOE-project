@@ -25,11 +25,18 @@ body {
 
 a {
   text-decoration: none;
+  color:#333;
 }
 
-.container {
+.menu {
+  font:bold 16px "malgun gothic";
   width: 1000px;
-  margin: auto;
+	height:50px;
+	background: #ccc;
+	color:black;
+	line-height: 50px; 
+	margin:0 auto;
+	text-align: center;
 }
 
 
@@ -109,66 +116,49 @@ h1 {
 /*********************/
 /* Navigation Styles */
 /*********************/
-
-nav {
-  background: #2acaea;
-}
-
-nav ul {
-  font-size: 0;
+* {
   margin: 0;
   padding: 0;
 }
-
-nav ul li {
-  display: inline-block;
-  position: relative;
-  right: 200px;
+ul li{
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fafafa;
 }
 
-
-nav ul li a {
-  color: #fff;
-  display: block;
-  font-size: 16px;
-  padding: 20px 20px;
-  transition: 0.3s linear;
+.menu {
+  font:bold 16px "malgun gothic";
+  width:auto;
+  height:100px;
+  background: #2acaea;
+  color:black;
+  line-height: 50px; 
+  margin: 0 auto;
+  text-align: center;
 }
 
-nav ul li:hover {
-  background: #126d9b;
+.menu ul li {
+  float:left;
+  width:140px;
+  position:relative;
 }
-
-nav ul li ul {
-  border-bottom: 5px solid #2ba0db;
-  display: none;
+.menu ul li ul {
+  width:140px;
+  display:none;
   position: absolute;
-  width: 250px;
+  font-size:14px;
+  background: #2acaea;
 }
-
-nav ul li ul li {
-  border-top: 1px solid #444;
-  display: block;
-  right: 0px;
+.menu ul li:hover ul {
+  display:block;
+  
 }
-
-nav ul li ul li:first-child {
-  border-top: none;
-}
-
-nav ul li ul li a {
-  background: #373737;
-  display: block;
-  padding: 10px 14px;
-}
-
-nav ul li ul li a:hover {
-  background: #126d9b;
-}
-
-nav .dropdown {
-  margin-left: 6px;
-}
+.menu ul li ul li:hover {
+  background: #7a5ef8;
+  transition: ease 1s;
+  }
 
 /******************/
 /*   바디 영역    */
