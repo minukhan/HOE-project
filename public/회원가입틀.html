@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="회원가입틀.js"></script>
+    <link href="./img/HOE_logo7.png" rel="shourtcut icon" type="image/x-icon">
+  </head>
+  <body>
+
+    <a href="./index.html"><img src="./img/HOE_logo3.png" width="120" height="60"></img></a>
+
+    <form id="signup">
+      <label for="student id">학번</label>
+      <input type="text" id="student id" size="20" placeholder="학번">
+      
+      <label for="grade">학년</label>
+      <select id="grade">
+        <option value="" selected>-선택-</option>
+        <option value="1">1학년</option>
+        <option value="2">2학년</option>
+        <option value="3">3학년</option>
+        <option value="4">4학년</option>
+        <option value="5">5학년</option>
+      </select>
+
+      <label for="학부">학부</label>
+
+      <select onchange="categoryChange(this)">
+        <option>학부를 선택해주세요</option>
+        <option value="a">컴퓨터응용수학부</option>
+        <option value="b">인문융합공공인재학부</option>
+        <option value="c">법경영학부</option>
+        <option value="d">웰니스산업융합학부</option>
+        <option value="e">식물자원조경학부</option>
+        <option value="f">동물생명융합학부</option>
+        <option value="g">생명공학부</option>
+        <option value="h">건설환경공학부</option>
+        <option value="i">사회안전시스템공학부</option>
+        <option value="j">식품생명화학공학부</option>
+        <option value="k">ICT로봇기계공학부</option>
+        <option value="l">전자전기공학부</option>
+        <option value="o">디자인건축융학학부</option>
+      </select>
+
+      <label for="트랙">트랙</label>
+      <select id="department">
+        <option>-전공트랙선택해주세요-</option>
+      </select>
+    </form>
+  </body>
+</html>
