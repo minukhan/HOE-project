@@ -28,7 +28,7 @@ a {
   color:#333;
 }
 
-.menu {
+nav div {
   font:bold 16px "malgun gothic";
   width: 1000px;
 	height:50px;
@@ -142,18 +142,17 @@ h1 {
   margin: 0;
   padding: 0;
 }
-ul li{
-  list-style: none;
-}
+
 a {
   text-decoration: none;
   color: #fafafa;
 }
 
-.menu {
+nav div{
   font:bold 16px "malgun gothic";
-  width:auto;
-  height:100px;
+  width: auto;
+  margin: 20px;
+  height: 100px;
   background: #2acaea;
   color:black;
   line-height: 50px; 
@@ -161,24 +160,25 @@ a {
   text-align: center;
 }
 
-.menu ul li {
-  float:left;
+nav div ul li {
+  list-style: none;
+  float: left;
   width:140px;
   position:relative;
 }
-.menu ul li ul {
+nav div ul li ul {
   width:140px;
   display:none;
   position: absolute;
   font-size:14px;
   background: #2acaea;
 }
-.menu ul li:hover ul {
+nav div ul li:hover ul {
   display:block;
   
 }
-.menu ul li ul li:hover {
-  background: #7a5ef8;
+nav div ul li ul li:hover {
+  background: #ccc;
   transition: ease 1s;
   }
 
