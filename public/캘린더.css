@@ -1,0 +1,11 @@
+.menu {
+    height: 80px;
+    width: auto;
+    background: #2acaea;
+}
+
+.menu ul li {
+    top: 15px;
+    left: 47%
+}
+/* 위 코드 건들지 마세여!!! */
