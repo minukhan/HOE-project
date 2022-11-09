@@ -14,55 +14,64 @@
       </ul>
     </div>
   </nav>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d58731fbc636c8787d6cebd5fadad5e1"></script>
 </head>
 
 <body>
-  <div id="map" style="width: 800px;height:400px;"></div>
+  <div id="map" style="width: 100%;height:600px;"></div>
   <div class="buildingList">
     <li>
-      <input type="hidden" name="longitude" id="longitude_16" value="127.26512594120191" />
-      <input type="hidden" name="latitude" id="latitude_16" value="37.01076279791222" />
-      <a href="" onclick="">제2공학관</a>
+      <input type="hidden" name="longitude" id="longitude_22" value="127.26512594120191" />
+      <input type="hidden" name="latitude" id="latitude_22" value="37.01076279791222" />
+      <a></a>
+      <button onclick="panTo(37.01076279791222,127.26512594120191),Marker(37.01076279791222,127.26512594120191)">제2 공학관</button> 
     </li>
     <li>
       <input type="hidden" name="longitude" id="longitude_15" value="127.26524280175805" />
       <input type="hidden" name="latitude" id="latitude_15" value="37.0120578363988" />
-      <a href="#none" onclick="">제3공학관관</a>
+      <button onclick="panTo(37.0120578363988,127.26524280175805),Marker(37.0120578363988,127.26524280175805)">제3 공학관</button>
     </li>
 
     <li>
       <input type="hidden" name="longitude" id="longitude_1" value="127.26318833079759" />
       <input type="hidden" name="latitude" id="latitude_1" value="37.01093831526075" />
-      <a href="#none" onclick="">인문사회과학관</a>
+      <button onclick="panTo(37.01093831526075,127.26318833079759),Marker(37.01093831526075,127.26318833079759)">인문사회과학관</button>
     </li>
 
     <li>
       <input type="hidden" name="longitude" id="longitude_2" value="127.26170844943164" />
       <input type="hidden" name="latitude" id="latitude_2" value="37.01189447774363" />
-      <a href="#none" onclick="">자연과학관</a>
+      <button onclick="panTo(37.01189447774363,127.26170844943164),Marker(37.01189447774363,127.26170844943164)">자연과학관</button>
+    </li>
+
+    <li>
+      <input type="hidden" name="longitude" id="longitude_20" value="127.26565341683457" />
+      <input type="hidden" name="latitude" id="latitude_20" value="37.01139237305407" />
+      <button onclick="panTo(37.01139237305407,127.26565341683457),Marker(37.01139237305407,127.26565341683457)">1공학관</button>
     </li>
 
     <li>
       <input type="hidden" name="longitude" id="longitude_3" value="127.2630653592444" />
       <input type="hidden" name="latitude" id="latitude_3" value="37.012749754580156" />
-      <a href="#none" onclick="">제1농학관</a>
+      <button onclick="panTo(37.012749754580156,127.2630653592444),Marker(37.012749754580156,127.2630653592444)">제 1농학관</button>
     </li>
 
     <li>
       <input type="hidden" name="longitude" id="longitude_12" value="127.26521443555164" />
       <input type="hidden" name="latitude" id="latitude_12" value="37.010361620438815" />
-      <a href="#none" onclick="">축산기술지원센터</a>
+      <button onclick="panTo(37.010361620438815,127.26521443555164),Marker(37.010361620438815,127.26521443555164)">제 2농학관</button>
     </li>
 
     <li>
       <input type="hidden" name="longitude" id="longitude_29" value="127.26094322496421" />
       <input type="hidden" name="latitude" id="latitude_29" value="37.01237598666575" />
-      <a href="#none" onclick="">미래융합기술연구센터(본관)</a>
+      <button onclick="panTo(37.01237598666575,127.26094322496421),Marker(37.01237598666575,127.26094322496421)">미래융합기술연구센터(본관)</button>
     </li>
   </div>
 
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d58731fbc636c8787d6cebd5fadad5e1"></script>
+  
   <script>
+
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
       mapOption = {
         center: new kakao.maps.LatLng(37.0117, 127.2642), // 지도의 중심좌표
@@ -72,27 +81,42 @@
     // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
     var map = new kakao.maps.Map(mapContainer, mapOption);
 
-    // 마커가 표시될 위치입니다 
-    var markerPosition = new kakao.maps.LatLng(37.0117, 127.2642);
-
-    // 마커를 생성합니다
-    var marker = new kakao.maps.Marker({
-      position: markerPosition
-    });
-
-    // 마커가 지도 위에 표시되도록 설정합니다
-    marker.setMap(map);
-
-    // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
-    // marker.setMap(null);  
-    function panTo() {
+    function panTo(a,b) {
       // 이동할 위도 경도 위치를 생성합니다 
-      var moveLatLon = new kakao.maps.LatLng(37.01093831526075, 127.26318833079759);
+      var moveLatLon = new kakao.maps.LatLng(a, b);
 
       // 지도 중심을 부드럽게 이동시킵니다
       // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
       map.panTo(moveLatLon);
     }         
+
+    function Marker(a,b){
+
+      // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+      
+
+      // 마커가 표시될 위치입니다 
+      var markerPosition = new kakao.maps.LatLng(a, b);
+
+      // 마커를 생성합니다
+      var marker = new kakao.maps.Marker({
+        position: markerPosition
+      });
+      marker.setMap(map);
+
+    }
+
+    var markerPosition = new kakao.maps.LatLng(37.0117, 127.2642);
+
+      // 마커를 생성합니다
+      var marker = new kakao.maps.Marker({
+        position: markerPosition
+      });
+      marker.setMap(map);
+
+    //marker.setMap(null);  
+    
+
   </script>
 </body>
 </html>
