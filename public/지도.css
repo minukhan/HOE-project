@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 지우지마세요!!! 지우면 큰일나요!!! */
 nav ul li {
     left: 0px;
@@ -6,3 +7,15 @@ nav ul li {
 .buildingList li a{
     
 }
+=======
+.none {
+    height: 30px;
+    width: auto;
+    background-color: #2acaea;
+}
+
+.menu {
+    height: 90px;
+}
+/* 위 코드 건들지 마세여!!! */
+>>>>>>> da8ce777d641b621cb86a02a6ba450b1f352af8e
