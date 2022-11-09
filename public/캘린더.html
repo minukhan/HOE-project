@@ -17,7 +17,7 @@
       headerToolbar: {
         left: 'dayGridMonth,timeGridWeek,timeGridDay',
         center: 'title',
-        right: 'today add,delete'
+        right: 'today add'
       },
       footerToolbar: {
         left: '',
@@ -28,14 +28,19 @@
         add: {
           text: '+',
           click: function() {
-            alert('일정등록하기!');
-          }
-        },
-        delete: {
-          text: '-',
-          click: function() {
-            alert('일정삭제하기!');
-          }
+            var ch = prompt('일정 날짜를 입력하세요:');
+            start: ch.start;
+            var ti= prompt('일정을 입력하세요:');
+              if(ti) {
+                  calendar.addEvent({
+                      title: ti,
+                      start: ch.start,
+                      end: ch.end,
+                      allDay: ch.allDay
+                  })
+              }
+              calendar.unselect()
+            }
         }
       },
       //initialDate: '2022-11-03', 
