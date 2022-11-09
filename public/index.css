@@ -46,12 +46,19 @@ h1 {
 }
 
 /* 로그인 버튼 영역 */
+.login {
+  background: #2acaea;
+  width: auto;
+}
 
-.login a .data {
-  position: absolute;
-  top: 6px;
-  left: 79vw;
-  /* left: 1725px; */
+.login button {
+  float: right;
+}
+
+.login .login-data {
+  position: relative;
+  margin-top: 10px;
+  margin-right: 8px;
   border: none;
   display: inline-block;
   padding: 9px 9px;
@@ -62,18 +69,16 @@ h1 {
   font-weight: 600;
   transition: 0.25s;
 }
-
-.login a .data:hover {
-  
+.login .login-data:hover {
   color:#2acaea;
   cursor: pointer;
 }
 
-.login a .login-sign {
-  position: absolute;
-  top: 6px;
-  left: 85vw;
-  /* left: 1635px; */
+
+.login .login-sign {
+  position: relative;
+  margin-top: 10px;
+  margin-right: 8px;
   border: none;
   display: inline-block;
   padding: 9px 9px;
@@ -84,18 +89,16 @@ h1 {
   font-weight: 600;
   transition: 0.25s;
 }
-
-.login a .login-sign:hover {
-  
+.login .login-sign:hover {
   color:#2acaea;
   cursor: pointer;
 }
 
-.login a .login-in {
-  position: absolute;
-  top: 6px;
-  left: 90vw;
-  /* left: 1725px; */
+
+.login .login-in {
+  position: relative;
+  margin-top: 10px;
+  margin-right: 8px;
   border: none;
   display: inline-block;
   padding: 9px 9px;
@@ -106,18 +109,16 @@ h1 {
   font-weight: 600;
   transition: 0.25s;
 }
-
-.login a .login-in:hover {
-  
+.login .login-in:hover {
   color:#2acaea;
   cursor: pointer;
 }
 
-.login a .login-out {
-  position: absolute;
-  top: 6px;
-  left: 94vw;
-  /* left: 1800px; */
+
+.login .login-out {
+  position: relative;
+  margin-top: 10px;
+  margin-right: 8px;
   border: none;
   display: inline-block;
   padding: 9px 9px;
@@ -128,9 +129,7 @@ h1 {
   font-weight: 600;
   transition: 0.25s;
 }
-
-.login a .login-out:hover {
-  
+.login .login-out:hover {
   color:#2acaea;
   cursor: pointer;
 }
@@ -143,41 +142,44 @@ h1 {
   padding: 0;
 }
 
-a {
+.menu a {
   text-decoration: none;
   color: #fafafa;
 }
 
-nav div{
-  font:bold 16px "malgun gothic";
-  width: auto;
-  margin: 20px;
-  height: 100px;
+.menu{
   background: #2acaea;
+  width: auto;
+  height: 120px;
+}
+
+.menu ul {
+  font:bold 16px "malgun gothic";
+  margin: 20px;
   color:black;
   line-height: 50px; 
   margin: 0 auto;
-  text-align: center;
+  text-align: center; 
 }
 
-nav div ul li {
+.menu ul li {
   list-style: none;
   float: left;
   width:140px;
   position:relative;
 }
-nav div ul li ul {
+.menu ul li ul {
   width:140px;
   display:none;
   position: absolute;
   font-size:14px;
   background: #2acaea;
 }
-nav div ul li:hover ul {
+.menu ul li:hover ul {
   display:block;
   
 }
-nav div ul li ul li:hover {
+.menu ul li ul li:hover {
   background: #ccc;
   transition: ease 1s;
   }
