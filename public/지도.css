@@ -2,22 +2,3 @@
 nav ul li {
     left: 0px;
 }
-
-.buildingList li {
-    background-color: aqua;
-    width: 180px;
-    display: inline-block;
-    padding: 5px 0px 5px 5px;
-    list-style: none;
-    margin-bottom: 5px;
-    font-size: 12px;
-    font-style: bold;
-    cursor: pointer
-};
-.buildingList li a {
-    text-align: center;
-    color: black;
-}
-.buildingList li a:hover{
-    background-color: #007b73;
-}
