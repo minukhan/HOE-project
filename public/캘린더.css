@@ -1,11 +1,12 @@
-.menu {
-    height: 80px;
+nav {
+    background-color: #2acaea;
     width: auto;
-    background: #2acaea;
+    height: 90px;
+    text-align: center; 
+
 }
 
-.menu ul li {
-    top: 15px;
-    left: 47%
+nav img {
+    padding-top: 17px;
 }
 /* 위 코드 건들지 마세여!!! */
