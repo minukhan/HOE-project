@@ -19,61 +19,16 @@
 </head>
 
 <body>
-  <div id="map" style="width: 60%;height:600px;"></div>
+  <div id="map" style="width: 100%;height:100%;"></div>
   <div class="buildingList">
-    <li>
-      <input type="hidden" name="longitude" id="longitude_20" value="127.26565341683457" />
-      <input type="hidden" name="latitude" id="latitude_20" value="37.01139237305407" />
-      <a onclick="panTo(37.01139237305407,127.26565341683457)">제 1공학관</a>
-    </li>
-
-    <li>
-      <input type="hidden" name="longitude" id="longitude_22" value="127.26512594120191" />
-      <input type="hidden" name="latitude" id="latitude_22" value="37.01076279791222" />
-      <a onclick="panTo(37.01076279791222,127.26512594120191)">제2 공학관</a>
-    </li>
-    <li>
-      <input type="hidden" name="longitude" id="longitude_15" value="127.26524280175805" />
-      <input type="hidden" name="latitude" id="latitude_15" value="37.0120578363988" />
-      <a onclick="panTo(37.0120578363988,127.26524280175805)">제3 공학관</a>
-    </li>
-
-    <li>
-      <input type="hidden" name="longitude" id="longitude_1" value="127.26318833079759" />
-      <input type="hidden" name="latitude" id="latitude_1" value="37.01093831526075" />
-      <a onclick="panTo(37.01093831526075,127.26318833079759)">인문사회과학관</a>
-    </li>
-
-    <li>
-      <input type="hidden" name="longitude" id="longitude_2" value="127.26170844943164" />
-      <input type="hidden" name="latitude" id="latitude_2" value="37.01189447774363" />
-      <a onclick="panTo(37.01189447774363,127.26170844943164)">자연과학관</a>
-    </li>
-
-    <li>
-      <input type="hidden" name="longitude" id="longitude_3" value="127.2630653592444" />
-      <input type="hidden" name="latitude" id="latitude_3" value="37.012749754580156" />
-      <a onclick="panTo(37.012749754580156,127.2630653592444)">제1 농학관</a>
-    </li>
-
-    <li>
-      <input type="hidden" name="longitude" id="longitude_12" value="127.26521443555164" />
-      <input type="hidden" name="latitude" id="latitude_12" value="37.010361620438815" />
-      <a onclick="panTo(37.010361620438815,127.26521443555164)">제2 농학관</a>
-    </li>
-
-    <li>
-      <input type="hidden" name="longitude" id="longitude_29" value="127.26094322496421" />
-      <input type="hidden" name="latitude" id="latitude_29" value="37.01237598666575" />
-      <a onclick="panTo(37.01237598666575,127.26094322496421)">미래융합기술연구센터(본관)</a>
-    </li>
+    
   </div>
 
   <script>
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
       mapOption = {
         center: new kakao.maps.LatLng(37.0117, 127.2642), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
+        level: 2 // 지도의 확대 레벨
       };
 
     // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
@@ -90,6 +45,7 @@
     }
 
     // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
+    /*
     var positions = [
       {
         content: '<div>한경대학교</div>',
@@ -168,7 +124,7 @@
         latlng: new kakao.maps.LatLng(37.01337628687639,127.26395238658044)
       }
     ];
-
+    */
     for (var i = 0; i < positions.length; i++) {
       // 마커를 생성합니다
       var marker = new kakao.maps.Marker({
