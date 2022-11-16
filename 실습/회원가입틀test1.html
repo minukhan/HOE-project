@@ -11,8 +11,8 @@
     <a href="./index.html"><img src="./img/HOE_logo3.png" width="120" height="60"></img></a>
 
     <form id="signup">
-      <label for="message">학번 이름</label>
-      <input type="text" id="message" size="20" placeholder="학번">
+      <label for="message">학번</label>
+      <input type="text" id="student id" size="20" placeholder="학번">
       
       <label for="grade">학년</label>
       <select id="grade">
@@ -50,10 +50,10 @@
 
       <button type="button" onclick="savedata()">Save Data</button>
 
-
     </form>
   </body>
 </html>
+
 
 <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
 <script>
@@ -73,6 +73,7 @@
 	firebase.initializeApp(config);
 
 	//DOM
+  var messageField = document.getElementById("student id");
 	var messageField = document.getElementById("message");
 	var result = document.getElementById("result");
 
@@ -122,6 +123,58 @@
 	//삭제
 	function deleteall(){
 		database.ref("message").remove();
+		
+	}
+
+  // 여기까지가 message 코드
+
+  // 여기서부터 student id 코드
+
+  var database = firebase.database();
+	
+	//고유 아이디 만들기
+	function guid() {
+		function s4() {
+		  return ((1 + Math.random()) * 0x10000 | 0).toString(16).substring(1);
+		}
+		return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+	}
+
+	//메세지 읽기
+	var messageRef = database.ref("student id");
+	messageRef.on('child_added', function(snapshot) {
+	  var data = snapshot.val();
+		var message = data.text;
+		if(message != undefined){
+			result.value += message + "\n";
+		}
+	});
+
+	//전부 삭제되면 결과창의 내용도 지워 준다.
+	var messageRef = database.ref("student id");
+	messageRef.on('child_removed', function(snapshot) {
+		result.value = "";
+		messageField.value = "";
+	});
+
+	//메세지 저장
+	function savedata() {
+		var uuid = guid();
+		var message = messageField.value;
+		if (message == "")
+		{
+			alert("메시지를 입력하세요");
+			return true;
+		} 
+		database.ref('student id/' + uuid).set({
+			text: message
+		});
+		messageField.value = "";
+	}
+
+	//삭제
+	function deleteall(){
+		database.ref("student id").remove();
 		
 	}
 
