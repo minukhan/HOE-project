@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./index.css">
@@ -9,8 +10,9 @@
     <div class="menu">
       <ul>
         <li><a href="./index.html"><img src="./img/HOE_logo3.png" width="100" height="50"></img></a></li>
-        <li><a href="">캠퍼스맵</a></li>
-        <li><a href="">주변 편의시설</li>
+        <li><a href="./지도.html">캠퍼스맵</a></li>
+        <li><a href="./지도_편의.html">주변 편의시설</a></li>
+        <li><a href="./지도_편의이미지.html">편의시설 정적지도</a></li>
       </ul>
     </div>
   </nav>
@@ -18,105 +20,189 @@
 </head>
 
 <body>
-  <div id="map" style="width: 100%;height:600px;"></div>
+  <div id="map" style="width: 60%;height:600px;"></div>
   <div class="buildingList">
+    <li>
+      <input type="hidden" name="longitude" id="longitude_20" value="127.26565341683457" />
+      <input type="hidden" name="latitude" id="latitude_20" value="37.01139237305407" />
+      <a onclick="panTo(37.01139237305407,127.26565341683457)">제 1공학관</a>
+    </li>
+
     <li>
       <input type="hidden" name="longitude" id="longitude_22" value="127.26512594120191" />
       <input type="hidden" name="latitude" id="latitude_22" value="37.01076279791222" />
-      <a></a>
-      <button onclick="panTo(37.01076279791222,127.26512594120191),Marker(37.01076279791222,127.26512594120191)">제2 공학관</button> 
+      <a onclick="panTo(37.01076279791222,127.26512594120191)">제2 공학관</a>
     </li>
     <li>
       <input type="hidden" name="longitude" id="longitude_15" value="127.26524280175805" />
       <input type="hidden" name="latitude" id="latitude_15" value="37.0120578363988" />
-      <button onclick="panTo(37.0120578363988,127.26524280175805),Marker(37.0120578363988,127.26524280175805)">제3 공학관</button>
+      <a onclick="panTo(37.0120578363988,127.26524280175805)">제3 공학관</a>
     </li>
 
     <li>
       <input type="hidden" name="longitude" id="longitude_1" value="127.26318833079759" />
       <input type="hidden" name="latitude" id="latitude_1" value="37.01093831526075" />
-      <button onclick="panTo(37.01093831526075,127.26318833079759),Marker(37.01093831526075,127.26318833079759)">인문사회과학관</button>
+      <a onclick="panTo(37.01093831526075,127.26318833079759)">인문사회과학관</a>
     </li>
 
     <li>
       <input type="hidden" name="longitude" id="longitude_2" value="127.26170844943164" />
       <input type="hidden" name="latitude" id="latitude_2" value="37.01189447774363" />
-      <button onclick="panTo(37.01189447774363,127.26170844943164),Marker(37.01189447774363,127.26170844943164)">자연과학관</button>
-    </li>
-
-    <li>
-      <input type="hidden" name="longitude" id="longitude_20" value="127.26565341683457" />
-      <input type="hidden" name="latitude" id="latitude_20" value="37.01139237305407" />
-      <button onclick="panTo(37.01139237305407,127.26565341683457),Marker(37.01139237305407,127.26565341683457)">1공학관</button>
+      <a onclick="panTo(37.01189447774363,127.26170844943164)">자연과학관</a>
     </li>
 
     <li>
       <input type="hidden" name="longitude" id="longitude_3" value="127.2630653592444" />
       <input type="hidden" name="latitude" id="latitude_3" value="37.012749754580156" />
-      <button onclick="panTo(37.012749754580156,127.2630653592444),Marker(37.012749754580156,127.2630653592444)">제 1농학관</button>
+      <a onclick="panTo(37.012749754580156,127.2630653592444)">제1 농학관</a>
     </li>
 
     <li>
       <input type="hidden" name="longitude" id="longitude_12" value="127.26521443555164" />
       <input type="hidden" name="latitude" id="latitude_12" value="37.010361620438815" />
-      <button onclick="panTo(37.010361620438815,127.26521443555164),Marker(37.010361620438815,127.26521443555164)">제 2농학관</button>
+      <a onclick="panTo(37.010361620438815,127.26521443555164)">제2 농학관</a>
     </li>
 
     <li>
       <input type="hidden" name="longitude" id="longitude_29" value="127.26094322496421" />
       <input type="hidden" name="latitude" id="latitude_29" value="37.01237598666575" />
-      <button onclick="panTo(37.01237598666575,127.26094322496421),Marker(37.01237598666575,127.26094322496421)">미래융합기술연구센터(본관)</button>
+      <a onclick="panTo(37.01237598666575,127.26094322496421)">미래융합기술연구센터(본관)</a>
     </li>
   </div>
 
-  
   <script>
-
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
       mapOption = {
-        center: new kakao.maps.LatLng(37.0117, 127.2642), // 지도의 중심좌표
+        center: new kakao.maps.LatLng(37.0118447723894, 127.26380944691581), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
       };
 
     // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
     var map = new kakao.maps.Map(mapContainer, mapOption);
+    var markerPosition = new kakao.maps.LatLng(37.0117, 127.2642);
 
-    function panTo(a,b) {
+    function panTo(a, b) {
       // 이동할 위도 경도 위치를 생성합니다 
       var moveLatLon = new kakao.maps.LatLng(a, b);
 
       // 지도 중심을 부드럽게 이동시킵니다
       // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
       map.panTo(moveLatLon);
-    }         
-
-    function Marker(a,b){
-
-      // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
-      
-
-      // 마커가 표시될 위치입니다 
-      var markerPosition = new kakao.maps.LatLng(a, b);
-
-      // 마커를 생성합니다
-      var marker = new kakao.maps.Marker({
-        position: markerPosition
-      });
-      marker.setMap(map);
-
     }
 
-    var markerPosition = new kakao.maps.LatLng(37.0117, 127.2642);
+    // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
+    var positions = [
+      {
+        content: '<div>한경대학교</div>',
+        latlng: new kakao.maps.LatLng(37.0118447723894, 127.26380944691581)
+      },
+      {
+        content: '<div>제1 공학관</div>',
+        latlng: new kakao.maps.LatLng(37.01139237305407,127.26565341683457)
+      },
+      {
+        content: '<div>제2 공학관</div>',
+        latlng: new kakao.maps.LatLng(37.01076279791222,127.26512594120191)
+      },
+      {
+        content: '<div>제3 공학관</div>',
+        latlng: new kakao.maps.LatLng(37.0120578363988,127.26524280175805)
+      },
+      {
+        content: '<div>인문사회과학관</div>',
+        latlng: new kakao.maps.LatLng(37.01093831526075,127.26318833079759)
+      },
+      {
+        content: '<div>자연과학관</div>',
+        latlng: new kakao.maps.LatLng(37.01189447774363,127.26170844943164)
+      },
+      {
+        content: '<div>제1 농학관</div>',
+        latlng: new kakao.maps.LatLng(37.012749754580156,127.2630653592444)
+      },
+      {
+        content: '<div>제2 농학관</div>',
+        latlng: new kakao.maps.LatLng(37.010361620438815,127.26521443555164)
+      },
+      {
+        content: '<div>미래융합기술연구센터</div>',
+        latlng: new kakao.maps.LatLng(37.01237598666575,127.26094322496421)
+      },
+      {
+        content: '<div>중앙도서관</div>',
+        latlng: new kakao.maps.LatLng(37.01147277272208,127.26293174249432)
+      },
+      {
+        content: '<div>지역문화복합관</div>',
+        latlng: new kakao.maps.LatLng(37.01130382996309,127.26190867429577)
+      },
+      {
+        content: '<div>체육관</div>',
+        latlng: new kakao.maps.LatLng(37.01028157627482,127.26373101052043)
+      },
+      {
+        content: '<div>공동실험실습관</div>',
+        latlng: new kakao.maps.LatLng(37.01180872210951,127.26583183583512)
+      },  
+      {
+        content: '<div>기숙사 비봉관</div>',
+        latlng: new kakao.maps.LatLng(37.012769292990775,127.26541943725553)
+      },
+      {
+        content: '<div>기숙사 창조관</div>',
+        latlng: new kakao.maps.LatLng(37.013125129213094,127.26343745359547)
+      },
+      {
+        content: '<div>기숙사 호연관</div>',
+        latlng: new kakao.maps.LatLng(37.013406086314866,127.26270524682262)
+      },
+      {
+        content: '<div>기숙사 나래관</div>',
+        latlng: new kakao.maps.LatLng(37.01279978157769,127.26183515323814)
+      },
+      {
+        content: '<div>학생회관</div>',
+        latlng: new kakao.maps.LatLng(37.01252164154244,127.26231455055135)
+      },
+      {
+        content: '<div>그린낙농기술지원센터</div>',
+        latlng: new kakao.maps.LatLng(37.01337628687639,127.26395238658044)
+      }
+    ];
 
+    for (var i = 0; i < positions.length; i++) {
       // 마커를 생성합니다
       var marker = new kakao.maps.Marker({
-        position: markerPosition
+        map: map, // 마커를 표시할 지도
+        position: positions[i].latlng // 마커의 위치
       });
-      marker.setMap(map);
 
-    //marker.setMap(null);  
-    
+      // 마커에 표시할 인포윈도우를 생성합니다 
+      var infowindow = new kakao.maps.InfoWindow({
+        content: positions[i].content // 인포윈도우에 표시할 내용
+      });
 
+      // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+      // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+      // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+      kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+      kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+    }
+
+    // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+    function makeOverListener(map, marker, infowindow) {
+      return function () {
+        infowindow.open(map, marker);
+      };
+    }
+
+    // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+    function makeOutListener(infowindow) {
+      return function () {
+        infowindow.close();
+      };
+    }
   </script>
 </body>
+
 </html>
