@@ -10,6 +10,7 @@
 <script src='./fullcalendar-5.11.3/lib/main.js'></script>
 <script>
 
+  var chan = new Date();
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
@@ -28,15 +29,14 @@
         add: {
           text: '+',
           click: function() {
-            var ch = prompt('일정 날짜를 입력하세요:');
-            start: ch.start;
-            var ti= prompt('일정을 입력하세요:');
+            var title= prompt('일정을 입력하세요:');
+            click
               if(ti) {
                   calendar.addEvent({
-                      title: ti,
-                      start: ch.start,
-                      end: ch.end,
-                      allDay: ch.allDay
+                      title: title,
+                      start: chan.start,
+                      end: chan.end,
+                      allDay: chan.allDay
                   })
               }
               calendar.unselect()
