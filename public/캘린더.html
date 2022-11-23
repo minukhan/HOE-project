@@ -10,7 +10,6 @@
 <script src='./fullcalendar-5.11.3/lib/main.js'></script>
 <script>
 
-  var chan = new Date();
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
@@ -24,24 +23,6 @@
         left: '',
         center: '',
         right: 'prevYear,prev,next,nextYear'
-      },
-      customButtons: {
-        add: {
-          text: '+',
-          click: function() {
-            var title= prompt('일정을 입력하세요:');
-            click
-              if(ti) {
-                  calendar.addEvent({
-                      title: title,
-                      start: chan.start,
-                      end: chan.end,
-                      allDay: chan.allDay
-                  })
-              }
-              calendar.unselect()
-            }
-        }
       },
       //initialDate: '2022-11-03', 
       navLinks: true, // can click day/week names to navigate views
@@ -123,21 +104,6 @@
   });
 
 </script>
-<style>
-
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-    font-size: 14px;
-  }
-
-  #calendar {
-    max-width: 1055px;
-    margin: 25px auto;
-    padding-bottom: 20px;
-  }
-</style>
 </head>
 <body>
 
