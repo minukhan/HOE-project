@@ -10,13 +10,13 @@
 /* 위 코드 건들지 마세여!!! */
 
 /* container */
-#top{
+#index_top{
     width: 100%;
     height: 70px;
     background: #f5f6f7;
 }
 
-#top > p{
+#index_top > p{
     font-size: 40px;
     text-align: center;
     font-family: 'Noto Sans KR', sans-serif;
