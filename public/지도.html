@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-
+<html>
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="./지도.css">
-  <title>지도</title>
+  <title>HOE</title>
   <nav>
     <div class="none"></div>
     <div class="menu">
@@ -12,15 +12,165 @@
         <li><a href="./index.html"><img src="./img/HOE_logo3.png" width="100" height="50"></img></a></li>
         <li><a href="./지도.html">캠퍼스맵</a></li>
         <li><a href="./지도_편의.html">주변 편의시설</a></li>
-        <li><a href="./지도_편의이미지.html">편의시설 정적지도</a></li>
       </ul>
     </div>
   </nav>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d58731fbc636c8787d6cebd5fadad5e1"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-  <div id="map" style="width: 60%;height:600px;"></div>
+  <div id="map" style="width: 100%;height:600px;"></div>
+  <div class="bulid_info">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>건물 이름</th>
+          <th>내부 정보</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>본관</td>
+          <td>
+            교무팀, 
+            학사지원팀, 
+            기획팀, 
+            평가팀, 
+            HK혁신사업단, 
+            총무팀, 
+            인사팀, 
+            재무팀, 
+            대학행정본부, 
+            대학원통합행정실, 
+            국제협력단
+          </td>
+        </tr>
+        <tr>
+          <td>학생회관</td>
+          <td>
+            구내서점, 
+            신한은행, 
+            보건진료소, 
+            교직원식당, 
+            학생식당, 
+            증명서발급기, 
+            학생극장, 
+            잡카페, 
+            학생지원팀, 
+            교육혁신본부, 
+            대학일자리센터, 
+            학생상담센터, 
+            신문사, 
+            방송국
+          </td>
+        </tr>
+        <tr>
+          <td>중앙도서관</td>
+          <td>
+            복사실, 
+            한경마루, 
+            수서정리팀, 
+            열람팀, 
+            정보전산원
+          </td>
+        </tr>
+        <tr>
+          <td>제1공학관</td>
+          <td>
+            식품생명화학공학부, 
+            컴퓨터응용수학부, 
+            ICT로봇기계공학부, 
+            전자전기공학부
+          </td>
+        </tr>
+        <tr>
+          <td>제2공학관</td>
+          <td>
+            건설환경공학부, 
+            식품생명화학공학부, 
+            컴퓨터응용수학부
+          </td>
+        </tr>
+        <tr>
+          <td>제3공학관</td>
+          <td>
+            건설환경공학부, 
+            디자인건축융합학부
+          </td>
+        </tr>
+        <tr>
+          <td>기계공학관</td>
+          <td>
+            ICT로봇기계공학부
+          </td>
+        </tr>
+        <tr>
+          <td>인문사회과학관</td>
+          <td>
+            인문융합공공인재학부, 
+            법경영학부
+          </td>
+        </tr>
+        <tr>
+          <td>지역문화복합관</td>
+          <td>
+            웨이트 트레이닝실, 
+            평생교육원, 
+            농업과학교육원
+          </td>
+        </tr>
+        <tr>
+          <td>자연과학관</td>
+          <td>
+            웰니스산업융합학부, 
+            컴퓨터응용수학부, 
+            장애학생지원센터
+          </td>
+        </tr>
+        <tr>
+          <td>제1농학관</td>
+          <td>
+            식물자원조경학부, 
+            생명공학부, 
+            사회안전시스템공학부, 
+            부속농장
+          </td>
+        </tr>
+        <tr>
+          <td>제2농학관</td>
+          <td>
+            동물생명융합학부, 
+            생명공학부
+          </td>
+        </tr>
+        <tr>
+          <td>공동실험실습관</td>
+          <td>
+            공동실험실습관
+          </td>
+        </tr>
+        <tr>
+          <td>미래융합기술연구센터</td>
+          <td>
+            브라이트 칼리지, 
+            증명서발급기, 
+            시설팀, 
+            전기안전팀, 
+            기계팀, 
+            입학관리본부, 
+            교양교육지원센터, 
+            산학협력단
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+  <!--
   <div class="buildingList">
     <li>
       <input type="hidden" name="longitude" id="longitude_20" value="127.26565341683457" />
@@ -69,6 +219,8 @@
       <a onclick="panTo(37.01237598666575,127.26094322496421)">미래융합기술연구센터(본관)</a>
     </li>
   </div>
+  -->
+
 
   <script>
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
@@ -93,80 +245,84 @@
     // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
     var positions = [
       {
-        content: '<div>한경대학교</div>',
+        content: '<div>본관</div>',
         latlng: new kakao.maps.LatLng(37.0118447723894, 127.26380944691581)
       },
       {
         content: '<div>제1 공학관</div>',
-        latlng: new kakao.maps.LatLng(37.01139237305407,127.26565341683457)
+        latlng: new kakao.maps.LatLng(37.01139237305407, 127.26565341683457)
       },
       {
         content: '<div>제2 공학관</div>',
-        latlng: new kakao.maps.LatLng(37.01076279791222,127.26512594120191)
+        latlng: new kakao.maps.LatLng(37.01076279791222, 127.26512594120191)
       },
       {
         content: '<div>제3 공학관</div>',
-        latlng: new kakao.maps.LatLng(37.0120578363988,127.26524280175805)
+        latlng: new kakao.maps.LatLng(37.0120578363988, 127.26524280175805)
       },
       {
         content: '<div>인문사회과학관</div>',
-        latlng: new kakao.maps.LatLng(37.01093831526075,127.26318833079759)
+        latlng: new kakao.maps.LatLng(37.01093831526075, 127.26318833079759)
       },
       {
         content: '<div>자연과학관</div>',
-        latlng: new kakao.maps.LatLng(37.01189447774363,127.26170844943164)
+        latlng: new kakao.maps.LatLng(37.01189447774363, 127.26170844943164)
       },
       {
         content: '<div>제1 농학관</div>',
-        latlng: new kakao.maps.LatLng(37.012749754580156,127.2630653592444)
+        latlng: new kakao.maps.LatLng(37.012749754580156, 127.2630653592444)
       },
       {
         content: '<div>제2 농학관</div>',
-        latlng: new kakao.maps.LatLng(37.010361620438815,127.26521443555164)
+        latlng: new kakao.maps.LatLng(37.010361620438815, 127.26521443555164)
       },
       {
-        content: '<div>미래융합기술연구센터</div>',
-        latlng: new kakao.maps.LatLng(37.01237598666575,127.26094322496421)
+        content: '<div>미래융합관</div>',
+        latlng: new kakao.maps.LatLng(37.01237598666575, 127.26094322496421)
       },
       {
         content: '<div>중앙도서관</div>',
-        latlng: new kakao.maps.LatLng(37.01147277272208,127.26293174249432)
+        latlng: new kakao.maps.LatLng(37.01147277272208, 127.26293174249432)
       },
       {
         content: '<div>지역문화복합관</div>',
-        latlng: new kakao.maps.LatLng(37.01130382996309,127.26190867429577)
+        latlng: new kakao.maps.LatLng(37.01130382996309, 127.26190867429577)
       },
       {
         content: '<div>체육관</div>',
-        latlng: new kakao.maps.LatLng(37.01028157627482,127.26373101052043)
+        latlng: new kakao.maps.LatLng(37.01028157627482, 127.26373101052043)
       },
       {
         content: '<div>공동실험실습관</div>',
-        latlng: new kakao.maps.LatLng(37.01180872210951,127.26583183583512)
-      },  
-      {
-        content: '<div>기숙사 비봉관</div>',
-        latlng: new kakao.maps.LatLng(37.012769292990775,127.26541943725553)
+        latlng: new kakao.maps.LatLng(37.01180872210951, 127.26583183583512)
       },
       {
-        content: '<div>기숙사 창조관</div>',
-        latlng: new kakao.maps.LatLng(37.013125129213094,127.26343745359547)
+        content: '<div>비봉관</div>',
+        latlng: new kakao.maps.LatLng(37.012769292990775, 127.26541943725553)
       },
       {
-        content: '<div>기숙사 호연관</div>',
-        latlng: new kakao.maps.LatLng(37.013406086314866,127.26270524682262)
+        content: '<div>창조관</div>',
+        latlng: new kakao.maps.LatLng(37.013125129213094, 127.26343745359547)
       },
       {
-        content: '<div>기숙사 나래관</div>',
-        latlng: new kakao.maps.LatLng(37.01279978157769,127.26183515323814)
+        content: '<div>호연관</div>',
+        latlng: new kakao.maps.LatLng(37.013406086314866, 127.26270524682262)
+      },
+      {
+        content: '<div>나래관</div>',
+        latlng: new kakao.maps.LatLng(37.01279978157769, 127.26183515323814)
       },
       {
         content: '<div>학생회관</div>',
-        latlng: new kakao.maps.LatLng(37.01252164154244,127.26231455055135)
+        latlng: new kakao.maps.LatLng(37.01252164154244, 127.26231455055135)
       },
       {
-        content: '<div>그린낙농기술지원센터</div>',
-        latlng: new kakao.maps.LatLng(37.01337628687639,127.26395238658044)
+        content: '<div>그린낙농관</div>',
+        latlng: new kakao.maps.LatLng(37.01337628687639, 127.26395238658044)
+      },
+      {
+        content: '<div>기계공학관</div>',
+        latlng: new kakao.maps.LatLng(37.01295659508579, 127.26426274401545)
       }
     ];
 
