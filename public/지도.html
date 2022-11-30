@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./index.css">
@@ -23,153 +24,201 @@
 </head>
 
 <body>
-  <div id="map" style="width: 100%;height:600px;"></div>
-  <div class="bulid_info">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>건물 이름</th>
-          <th>내부 정보</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>본관</td>
-          <td>
-            교무팀, 
-            학사지원팀, 
-            기획팀, 
-            평가팀, 
-            HK혁신사업단, 
-            총무팀, 
-            인사팀, 
-            재무팀, 
-            대학행정본부, 
-            대학원통합행정실, 
-            국제협력단
-          </td>
-        </tr>
-        <tr>
-          <td>학생회관</td>
-          <td>
-            구내서점, 
-            신한은행, 
-            보건진료소, 
-            교직원식당, 
-            학생식당, 
-            증명서발급기, 
-            학생극장, 
-            잡카페, 
-            학생지원팀, 
-            교육혁신본부, 
-            대학일자리센터, 
-            학생상담센터, 
-            신문사, 
-            방송국
-          </td>
-        </tr>
-        <tr>
-          <td>중앙도서관</td>
-          <td>
-            복사실, 
-            한경마루, 
-            수서정리팀, 
-            열람팀, 
-            정보전산원
-          </td>
-        </tr>
-        <tr>
-          <td>제1공학관</td>
-          <td>
-            식품생명화학공학부, 
-            컴퓨터응용수학부, 
-            ICT로봇기계공학부, 
-            전자전기공학부
-          </td>
-        </tr>
-        <tr>
-          <td>제2공학관</td>
-          <td>
-            건설환경공학부, 
-            식품생명화학공학부, 
-            컴퓨터응용수학부
-          </td>
-        </tr>
-        <tr>
-          <td>제3공학관</td>
-          <td>
-            건설환경공학부, 
-            디자인건축융합학부
-          </td>
-        </tr>
-        <tr>
-          <td>기계공학관</td>
-          <td>
-            ICT로봇기계공학부
-          </td>
-        </tr>
-        <tr>
-          <td>인문사회과학관</td>
-          <td>
-            인문융합공공인재학부, 
-            법경영학부
-          </td>
-        </tr>
-        <tr>
-          <td>지역문화복합관</td>
-          <td>
-            웨이트 트레이닝실, 
-            평생교육원, 
-            농업과학교육원
-          </td>
-        </tr>
-        <tr>
-          <td>자연과학관</td>
-          <td>
-            웰니스산업융합학부, 
-            컴퓨터응용수학부, 
-            장애학생지원센터
-          </td>
-        </tr>
-        <tr>
-          <td>제1농학관</td>
-          <td>
-            식물자원조경학부, 
-            생명공학부, 
-            사회안전시스템공학부, 
-            부속농장
-          </td>
-        </tr>
-        <tr>
-          <td>제2농학관</td>
-          <td>
-            동물생명융합학부, 
-            생명공학부
-          </td>
-        </tr>
-        <tr>
-          <td>공동실험실습관</td>
-          <td>
-            공동실험실습관
-          </td>
-        </tr>
-        <tr>
-          <td>미래융합기술연구센터</td>
-          <td>
-            브라이트 칼리지, 
-            증명서발급기, 
-            시설팀, 
-            전기안전팀, 
-            기계팀, 
-            입학관리본부, 
-            교양교육지원센터, 
-            산학협력단
-          </td>
-        </tr>
-      </tbody>
+  <div style="display: table; width: 100%; height: 80%;">
+    <div style="display: table-row; height: 100%;">
+      <div id="map" style="display: table-cell; width : 50%;"></div>
+      <div class="bulid_info" style="display: table-cell;">
+        <table class="table table-striped w-auto; table-bordered; table-hover">
+          <thead>
+            <tr>
+              <th width="250px">건물 이름</th>
+              <th>내부 정보</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <Button class="btn" style="background-color: aquamarine;" type="button"
+                  onclick="bulidingPostion(37.0118447723894, 127.26380944691581)">본관</Button>
+              </td>
+              <td>
+                교무팀,
+                학사지원팀,
+                기획팀,
+                평가팀,
+                HK혁신사업단,
+                총무팀,
+                인사팀,
+                재무팀,
+                대학행정본부,
+                대학원통합행정실,
+                국제협력단
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Button class="btn" style="background-color: aquamarine;" type="button"
+                  onclick="bulidingPostion(37.01249242502418, 127.26228355034989)">학생회관</Button>
+              </td>
+              <td>
+                구내서점,
+                신한은행,
+                보건진료소,
+                교직원식당,
+                학생식당,
+                증명서발급기,
+                학생극장,
+                잡카페,
+                학생지원팀,
+                교육혁신본부,
+                대학일자리센터,
+                학생상담센터,
+                신문사,
+                방송국
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Button class="btn" style="background-color: aquamarine;" type="button"
+                  onclick="bulidingPostion(37.01150880312131, 127.26293748468107)">중앙도서관</Button>
+              </td>
+              <td>
+                복사실,
+                한경마루,
+                수서정리팀,
+                열람팀,
+                정보전산원
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Button class="btn" style="background-color: aquamarine;" type="button"
+                  onclick="bulidingPostion(37.01131018602202, 127.26513346058074)">제1공학관</Button>
+              </td>
+              <td>
+                식품생명화학공학부,
+                컴퓨터응용수학부,
+                ICT로봇기계공학부,
+                전자전기공학부
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Button class="btn" style="background-color: aquamarine;" type="button"
+                  onclick="bulidingPostion(37.01070206345468, 127.26508640416598)">제2공학관</Button>
+              </td>
+              <td>
+                건설환경공학부,
+                식품생명화학공학부,
+                컴퓨터응용수학부
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Button class="btn" style="background-color: aquamarine;" type="button"
+                  onclick="bulidingPostion(37.011899935510144, 127.26533776073596)">제3공학관</Button>
+              </td>
+              <td>
+                건설환경공학부,
+                디자인건축융합학부
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Button class="btn" style="background-color: aquamarine;" type="button"
+                  onclick="bulidingPostion(37.01290697364019, 127.26429066307819)">기계공학관</Button>
+              </td>
+              <td>
+                ICT로봇기계공학부
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Button class="btn" style="background-color: aquamarine;" type="button"
+                  onclick="bulidingPostion(37.01093179388118, 127.26308156576492)">인문사회과학관</Button>
+              </td>
+              <td>
+                인문융합공공인재학부,
+                법경영학부
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Button class="btn" style="background-color: aquamarine;" type="button"
+                  onclick="bulidingPostion(37.0113263443463, 127.26191436960774)">지역문화복합관</Button>
+              </td>
+              <td>
+                웨이트 트레이닝실,
+                평생교육원,
+                농업과학교육원
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Button class="btn" style="background-color: aquamarine;" type="button"
+                  onclick="bulidingPostion(37.011791027967824, 127.26162944143664)">자연과학관</Button>
+              </td>
+              <td>
+                웰니스산업융합학부,
+                컴퓨터응용수학부,
+                장애학생지원센터
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Button class="btn" style="background-color: aquamarine;"" type="button"
+                  onclick="bulidingPostion(37.0127784538131, 127.26332951190132)">제1농학관</Button>
+              </td>
+              <td>
+                식물자원조경학부,
+                생명공학부,
+                사회안전시스템공학부,
+                부속농장
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Button class="btn" style="background-color: aquamarine; " type="button"
+                  onclick="bulidingPostion(37.01031011006115, 127.26507942499238)">제2농학관</Button>
+              </td>
+              <td>
+                동물생명융합학부,
+                생명공학부
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Button class="btn" style="background-color: aquamarine;" type="button"
+                  onclick="bulidingPostion(37.011795243795355, 127.26581493461717)">공동실험실습관</Button>
+              </td>
+              <td>
+                공동실험실습관
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Button class="btn" style="background-color: aquamarine;" type="button"
+                  onclick="bulidingPostion(37.01235111456062, 127.26098527593285)">미래융합기술연구센터</Button>
+              </td>
+              <td>
+                브라이트 칼리지,
+                증명서발급기,
+                시설팀,
+                전기안전팀,
+                기계팀,
+                입학관리본부,
+                교양교육지원센터,
+                산학협력단
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-    </table>
   </div>
+
+
   <!--
   <div class="buildingList">
     <li>
@@ -220,8 +269,6 @@
     </li>
   </div>
   -->
-
-
   <script>
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
       mapOption = {
@@ -231,11 +278,33 @@
 
     // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
     var map = new kakao.maps.Map(mapContainer, mapOption);
-    var markerPosition = new kakao.maps.LatLng(37.0117, 127.2642);
 
+    //var markerPosition = new kakao.maps.LatLng(37.0117, 127.2642);
+
+    function bulidingPostion(latitude, longitude) {
+      var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = {
+          center: new kakao.maps.LatLng(latitude, longitude), // 지도의 중심좌표
+          level: 2 // 지도의 확대 레벨
+        };
+
+      var map = new kakao.maps.Map(mapContainer, mapOption);
+      var markerPosition = new kakao.maps.LatLng(latitude, longitude);
+      var marker = new kakao.maps.Marker({
+        position: markerPosition
+      });
+      marker.setMap(map);
+    }
+    /*
     function panTo(a, b) {
+
       // 이동할 위도 경도 위치를 생성합니다 
       var moveLatLon = new kakao.maps.LatLng(a, b);
+      var markerPosition = new kakao.maps.LatLng(a, b);
+      var marker = new kakao.maps.Marker({
+        position: markerPosition
+      });
+      marker.setMap(map);
 
       // 지도 중심을 부드럽게 이동시킵니다
       // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
@@ -325,39 +394,39 @@
         latlng: new kakao.maps.LatLng(37.01295659508579, 127.26426274401545)
       }
     ];
-
-    for (var i = 0; i < positions.length; i++) {
-      // 마커를 생성합니다
-      var marker = new kakao.maps.Marker({
-        map: map, // 마커를 표시할 지도
-        position: positions[i].latlng // 마커의 위치
-      });
-
-      // 마커에 표시할 인포윈도우를 생성합니다 
-      var infowindow = new kakao.maps.InfoWindow({
-        content: positions[i].content // 인포윈도우에 표시할 내용
-      });
-
-      // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
-      // 이벤트 리스너로는 클로저를 만들어 등록합니다 
-      // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
-      kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-      kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-    }
-
-    // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
-    function makeOverListener(map, marker, infowindow) {
-      return function () {
-        infowindow.open(map, marker);
-      };
-    }
-
-    // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
-    function makeOutListener(infowindow) {
-      return function () {
-        infowindow.close();
-      };
-    }
+        for (var i = 0; i < positions.length; i++) {
+          // 마커를 생성합니다
+          var marker = new kakao.maps.Marker({
+            map: map, // 마커를 표시할 지도
+            position: positions[i].latlng // 마커의 위치
+          });
+    
+          // 마커에 표시할 인포윈도우를 생성합니다 
+          var infowindow = new kakao.maps.InfoWindow({
+            content: positions[i].content // 인포윈도우에 표시할 내용
+          });
+    
+          // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+          // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+          // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+          kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+          kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+        }
+    
+        // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+        function makeOverListener(map, marker, infowindow) {
+          return function () {
+            infowindow.open(map, marker);
+          };
+        }
+    
+        // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+        function makeOutListener(infowindow) {
+          return function () {
+            infowindow.close();
+          };
+        }
+    */
   </script>
 </body>
 
