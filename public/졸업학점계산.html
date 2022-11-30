@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./학적.css" /> 
+
+    <script src="졸업학점계산.js"></script>
+    <title>학적</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
+    <header>
+      <nav>
+        <div class="none"></div>
+        <div class="menu">
+        <ul>
+            <li><a href="./index.html"><img src="./img/HOE_logo3.png" width="110" height="55"></img></a></li>
+            <li><a href="./학사정보.html">학사 정보</a></li>
+            <!-- a href = "버튼 누르면 들어가는 링크"  -->
+            <li><a href="./졸업학점계산.html">졸업 학점 계산</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </head>
+
+  <body>
+
+    <form id="signup">
+      <label for="학부">학부</label>
+
+      <select onchange="categoryChanges(this)">
+        <option>학부를 선택해주세요</option>
+        <option value="a">컴퓨터응용수학부</option>
+        <option value="b">인문융합공공인재학부</option>
+        <option value="c">법경영학부</option>
+        <option value="d">웰니스산업융합학부</option>
+        <option value="e">식물자원조경학부</option>
+        <option value="f">동물생명융합학부</option>
+        <option value="g">생명공학부</option>
+        <option value="h">건설환경공학부</option>
+        <option value="i">사회안전시스템공학부</option>
+        <option value="j">식품생명화학공학부</option>
+        <option value="k">ICT로봇기계공학부</option>
+        <option value="l">전자전기공학부</option>
+        <option value="o">디자인건축융학학부</option>
+      </select>
+
+
+
+      <script>
+       
+      </script>
+    </form>
+  </body>
+</html>

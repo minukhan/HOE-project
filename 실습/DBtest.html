@@ -5,7 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+    <style type="text/css">
+		#main {width: 500px; margin: 0 auto;}
+		hr {
+			display: block;
+			height: 1px;
+			border: 0;
+			border-top: 1px solid #ccc;
+			margin: 1em 0;
+			padding: 0; 
+		}
+	</style>
+    
     <title>Document</title>
 </head>
 <body>
@@ -17,16 +28,102 @@
 
         
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+  
+	
+ </head>
+ <body>
+	<div id="main">
+		<h2>Firebase Realtime Database Example</h2>
+		<input type="text" id="message" placeholder="메세지를 입력하세요" size="40"> <button type="button" onclick="savedata()">Save Data</button>
+		<hr>
+		<h3>Result</h3>
+		<textarea rows="10" cols="60" id="result" readonly></textarea>
+		<p>
+		<button type="button" onclick="deleteall()">Delete All</button>
+		</p>
+
+	</div>
+ </body>
+</html>
+
+
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<script>
+	// Initialize Firebase
+	var config = {
+	apiKey: "your_api",
+	authDomain: "projectId.firebaseapp.com",
+	databaseURL: "https://url.firebaseio.com",
+	projectId: "your_project_id",
+	storageBucket: "your_project_id.appspot.com",
+	messagingSenderId: "your_"
+	};
+	firebase.initializeApp(config);
+
+//DOM
+	var messageField = document.getElementById("message");
+	var result = document.getElementById("result");
+
+	// Get a reference to the database service
+	var database = firebase.database();
+	
+	//고유 아이디 만들기
+	function guid() {
+		function s4() {
+		  return ((1 + Math.random()) * 0x10000 | 0).toString(16).substring(1);
+		}
+		return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+	}
+
+	//메세지 읽기
+	var messageRef = database.ref("message");
+	messageRef.on('child_added', function(snapshot) {
+	  var data = snapshot.val();
+		var message = data.text;
+		if(message != undefined){
+			result.value += message + "\n";
+		}
+	});
+
+	//전부 삭제되면 결과창의 내용도 지워 준다.
+	var messageRef = database.ref("message");
+	messageRef.on('child_removed', function(snapshot) {
+		result.value = "";
+		messageField.value = "";
+	});
+
+	//메세지 저장
+	function savedata() {
+		var uuid = guid();
+		var message = messageField.value;
+		if (message == "")
+		{
+			alert("메시지를 입력하세요");
+			return true;
+		} 
+		database.ref('message/' + uuid).set({
+			text: message
+		});
+		messageField.value = "";
+	}
+
+	//삭제
+	function deleteall(){
+		database.ref("message").remove();
+		
+	}
+
+</script>
 
         <script>
-            function myFunction() {
+            /*function myFunction() {
                 document.getElementById("demo").innerHTML = "쓰기를 완료";
                 alert("쓰기 완료");
                 
                 //firebase에 쓰기
                 var dbRefObject = firebase.database().ref();
                 dbRefObject.child("object").set("Some Value");
-            }
+            }*/
         </script>
         
         <button type="button" onclick="myFunction()">데이터 쓰기</button>
@@ -42,7 +139,7 @@
                 measurementId: "G-T17RT8KVJX"
             };
             // 위에 코드들은 우리 호이 파이어베이스 API? 라고 생각
-
+/*
             // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
             // firebase에서 읽기
@@ -53,6 +150,7 @@
             dbRef.on('value',snap => {
                 preObject.innerText = JSON.stringify(snap.val(),null,3);
             });
+            */
         </script>
 
         
