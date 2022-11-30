@@ -17,26 +17,12 @@
       headerToolbar: {
         left: 'dayGridMonth,timeGridWeek,timeGridDay',
         center: 'title',
-        right: 'today add,delete'
+        right: 'today add'
       },
       footerToolbar: {
         left: '',
         center: '',
         right: 'prevYear,prev,next,nextYear'
-      },
-      customButtons: {
-        add: {
-          text: '+',
-          click: function() {
-            alert('일정등록하기!');
-          }
-        },
-        delete: {
-          text: '-',
-          click: function() {
-            alert('일정삭제하기!');
-          }
-        }
       },
       //initialDate: '2022-11-03', 
       navLinks: true, // can click day/week names to navigate views
@@ -118,21 +104,6 @@
   });
 
 </script>
-<style>
-
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-    font-size: 14px;
-  }
-
-  #calendar {
-    max-width: 1055px;
-    margin: 25px auto;
-    padding-bottom: 20px;
-  }
-</style>
 </head>
 <body>
 

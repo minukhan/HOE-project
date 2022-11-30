@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./지도.css">
+  <title>지도</title>
+  <nav>
+    <div class="none"></div>
+    <div class="menu">
+      <ul>
+        <li><a href="./index.html"><img src="./img/HOE_logo3.png" width="100" height="50"></img></a></li>
+        <li><a href="./지도.html">캠퍼스맵</a></li>
+        <li><a href="./지도_편의.html">주변 편의시설</li>
+      </ul>
+    </div>
+  </nav>
+</head>
+<body>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d58731fbc636c8787d6cebd5fadad5e1"></script>
+  <div id="staticMap" style="width:50%;height:50%;"></div>
+<script>
+    var staticMapContainer  = document.getElementById('staticMap'), // 이미지 지도를 표시할 div  
+        staticMapOption = { 
+           center: new kakao.maps.LatLng(37.0118447723894, 127.26380944691581), // 이미지 지도의 중심좌표
+          level: 3 // 이미지 지도의 확대 레벨
+      };
+
+    // 이미지 지도를 표시할 div와 옵션으로 이미지 지도를 생성합니다
+    var staticMap = new kakao.maps.StaticMap(staticMapContainer, staticMapOption);
+  </script>
+</body>
+
+</html>
