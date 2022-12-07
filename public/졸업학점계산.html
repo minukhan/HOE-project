@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./학적.css" /> 
 
-    <script src="졸업학점계산.js"></script>
+    <script src="./학점계산.js"></script>
     <title>학적</title>
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
@@ -26,31 +26,213 @@
 
   <body>
 
-    <form id="signup">
-      <label for="학부">학부</label>
+    <div>
+      <div>
+          <h2>HOE 의 학적계산기</h2>
+        </br>
+          <p >과목에 맞는 학점 및 등급을 고르시오.</p>
+      </br>
+      </div>
 
-      <select onchange="categoryChanges(this)">
-        <option>학부를 선택해주세요</option>
-        <option value="a">컴퓨터응용수학부</option>
-        <option value="b">인문융합공공인재학부</option>
-        <option value="c">법경영학부</option>
-        <option value="d">웰니스산업융합학부</option>
-        <option value="e">식물자원조경학부</option>
-        <option value="f">동물생명융합학부</option>
-        <option value="g">생명공학부</option>
-        <option value="h">건설환경공학부</option>
-        <option value="i">사회안전시스템공학부</option>
-        <option value="j">식품생명화학공학부</option>
-        <option value="k">ICT로봇기계공학부</option>
-        <option value="l">전자전기공학부</option>
-        <option value="o">디자인건축융학학부</option>
-      </select>
+      <div id="GPACalc" class="container-fluid  container ">
+
+          <table class="table table-hover">
+              <tr>
+                  <td>과목 명</td>
+                  <td>학점
+                  </td>
+                  <td>등급</td>
+              </tr>
 
 
+              <tr>
+                  <td>
 
-      <script>
-       
-      </script>
-    </form>
+                      문제해결 프로젝트
+
+                  </td>
+                  <td>
+                      <select class="form-control" onchange="changeVal()" id="b1">
+                          <option value="0">-Select-</option>
+
+                          <option value="3">1</option>
+                          <option value="3">2</option>
+                          <option value="3">3</option>
+
+                      </select>
+                  </td>
+                  <td>
+                      <select class="form-control" onchange="changeGrd()" id="c1">
+                          <option value="0">-Select-</option>
+                          <option value="4.5">A+</option>
+                          <option value="4">A</option>
+                          <option value="3.5">B+</option>
+                          <option value="3">B</option>
+                          <option value="2.5">C+</option>
+                          <option value="2">C</option>
+                          <option value="1.5">D+</option>
+                          <option value="1">D</option>
+                          <option value="0">F</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+
+                      융합이산수학
+
+                  </td>
+                  <td>
+                      <select class="form-control" onchange="changeVal()" id="b2">
+                          <option value="0">-Select-</option>
+                          <option value="3">1</option>
+                          <option value="3">2</option>
+                          <option value="3">3</option>
+
+                      </select>
+                  </td>
+                  <td>
+                      <select class="form-control" onchange="changeGrd()" id="c2">
+                          <option value="0">-Select-</option>
+                          <option value="4.5">A+</option>
+                          <option value="4">A</option>
+                          <option value="3.5">B+</option>
+                          <option value="3">B</option>
+                          <option value="2.5">C+</option>
+                          <option value="2">C</option>
+                          <option value="1.5">D+</option>
+                          <option value="1">D</option>
+                          <option value="0">F</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      알고리즘 분석
+
+                  </td>
+                  <td>
+                      <select class="form-control" onchange="changeVal()" id="b3">
+                          <option value="0">-Select-</option>
+                          <option value="3">1</option>
+                          <option value="3">2</option>
+                          <option value="3">3</option>
+
+                      </select>
+                  </td>
+                  <td>
+                      <select class="form-control" onchange="changeGrd()" id="c3">
+                          <option value="0">-Select-</option>
+                          <option value="4.5">A+</option>
+                          <option value="4">A</option>
+                          <option value="3.5">B+</option>
+                          <option value="3">B</option>
+                          <option value="2.5">C+</option>
+                          <option value="2">C</option>
+                          <option value="1.5">D+</option>
+                          <option value="1">D</option>
+                          <option value="0">F</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      논리회로설계
+
+                  </td>
+                  <td>
+                      <select class="form-control" onchange="changeVal()" id="b4">
+                          <option value="0">-Select-</option>
+                          <option value="3">1</option>
+                          <option value="3">2</option>
+                          <option value="3">3</option>
+
+                      </select>
+                  </td>
+                  <td>
+                      <select class="form-control" onchange="changeGrd()" id="c4">
+                          <option value="0">-Select-</option>
+                          <option value="4.5">A+</option>
+                          <option value="4">A</option>
+                          <option value="3.5">B+</option>
+                          <option value="3">B</option>
+                          <option value="2.5">C+</option>
+                          <option value="2">C</option>
+                          <option value="1.5">D+</option>
+                          <option value="1">D</option>
+                          <option value="0">F</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      시스템 분석 및 설계
+
+                  </td>
+                  <td>
+                      <select class="form-control" onchange="changeVal()" id="b5">
+                          <option value="0">-Select-</option>
+                          <option value="3">1</option>
+                          <option value="3">2</option>
+                          <option value="3">3</option>
+
+                      </select>
+                  </td>
+                  <td>
+                      <select class="form-control" onchange="changeGrd()" id="c5">
+                          <option value="0">-Select-</option>
+                          <option value="4.5">A+</option>
+                          <option value="4">A</option>
+                          <option value="3.5">B+</option>
+                          <option value="3">B</option>
+                          <option value="2.5">C+</option>
+                          <option value="2">C</option>
+                          <option value="1.5">D+</option>
+                          <option value="1">D</option>
+                          <option value="0">F</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      빅데이터 분석
+
+                  </td>
+                  <td>
+                      <select class="form-control" onchange="changeVal()" id="b6">
+                          <option value="0">-Select-</option>
+                          <option value="3">1</option>
+                          <option value="3">2</option>
+                          <option value="3">3</option>
+
+                      </select>
+                  </td>
+                  <td>
+                      <select class="form-control" onchange="changeGrd()" id="c6">
+                          <option value="0">-Select-</option>
+                          <option value="4.5">A+</option>
+                          <option value="4">A</option>
+                          <option value="3.5">B+</option>
+                          <option value="3">B</option>
+                          <option value="2.5">C+</option>
+                          <option value="2">C</option>
+                          <option value="1.5">D+</option>
+                          <option value="1">D</option>
+                          <option value="0">F</option>
+
+                      </select>
+                  </td>
+              </tr>
+
+          </table>
+
+          <button class="btn btn-primary" onclick="viewResults()">계산하기</button>
+          <br/>
+
+          <br/>
+          <br/>
+          <p id="Result"></p>
+
+      </div>
   </body>
 </html>
