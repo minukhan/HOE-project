@@ -13,7 +13,6 @@
 #index_top{
     width: 100%;
     height: 70px;
-    background: #f5f6f7;
 }
 
 #index_top > p{
@@ -23,9 +22,9 @@
 }
 
 /* body */
+
 #board-wrap {
     padding: 50px 0;
-    background: #f5f6f7;
 }
 
 #board-wrap > div {
@@ -40,16 +39,15 @@
     display: inline-block;
     width: 48%;
     background: #fff;
+    border: 1px solid #aaa;
 }
 
 #board-wrap > div > div:nth-child(even){
     margin-left: 4%;
 }
 
-#board-wrap > div > div:nth-child(3),
-#board-wrap > div > div:nth-child(4),
-#board-wrap > div > div:nth-child(5){
-    margin-top: 40px;
+#board-wrap > div > div:nth-child(3){
+    margin-top: 60px;
 }
 
 .board .title{
