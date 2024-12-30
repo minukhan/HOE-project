@@ -48,7 +48,3 @@
 ### 게시판
 ![image](https://github.com/user-attachments/assets/ef232365-c432-4160-abd0-f399ec520ca2)
 
-# 클래스 다이어그램
-![image](https://github.com/user-attachments/assets/174df87e-3acd-4d61-bb69-035ac837286e)
-
-
