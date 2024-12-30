@@ -36,16 +36,16 @@
 ![image](https://github.com/user-attachments/assets/73ad1a3a-e2b9-401b-9b80-9aeff9785ea6)
 
 # UI
-### 첫 번째 UI
+### 메인페이지
 ![image](https://github.com/user-attachments/assets/68f84813-7e6f-4aab-a3e3-c4e421ac3063)
 
-### 두 번째 UI
+### 캘린더
 ![image](https://github.com/user-attachments/assets/137f9c53-e003-431a-b309-6ae0006be1c4)
 
-### 세 번째 UI
+### 지도
 ![image](https://github.com/user-attachments/assets/89b4b3ea-105a-4b6b-a9dc-ef1754b1d5c4)
 
-### 네 번째 UI
+### 게시판
 ![image](https://github.com/user-attachments/assets/ef232365-c432-4160-abd0-f399ec520ca2)
 
 # 클래스 다이어그램
